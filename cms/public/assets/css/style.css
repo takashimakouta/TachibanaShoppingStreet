@@ -1,0 +1,2689 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+body {
+  background-color: #ffffff;            /*ボディタグに背景色：白を設定*/
+}
+
+
+html {
+    font-size: 12px;
+}
+
+@font-face {
+  font-family: "ZenMaruGothic-Bold";
+  src: url("../fonts/ZenMaruGothic-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat-VariableFont_wght";
+  src: url("../fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
+}
+
+
+/*================================
+共通の設定
+=================================*/
+/*================================
+ヘッダー(header)の設定
+=================================*/
+header {
+  width: 100%;
+  padding: 24px 2% 8px;
+  background-image: url('../../images/home/header.jpg');         /*ヘッダーに立花商店街用の背景を設定*/
+  background-color:rgba(255,255,255,0.8);                        /*ヘッダーに背景色のみ透過を設定*/
+  background-blend-mode:lighten;                                 /*下レイヤー色と上レイヤー色のそれぞれのRGB値を比較して、よりRGB値の高い（明るい）色を採用する*/
+  top: 0;                                                        /*ヘッダーの上を0から設定*/
+  display: flex;                                                 /*ヘッダーの並びを横並びに設定*/
+  align-items: center;                                           /*ヘッダーの文字の位置を中央に設定*/
+    
+}
+
+
+
+
+header.h1 {
+  font-weight: bold;                                            /*ヘッダーにて立花商店街の文字を太字に設定*/
+  margin-left: 0;                                               /*ヘッダーにて立花商店街の文字とロゴ画像のマージン左0pxに設定*/
+  margin-right: 0;                                              /*ヘッダーにて立花商店街の文字とロゴ画像のマージン右0pxに設定*/
+  font-size: 25px;                                              /*ヘッダーにて立花商店街の文字の大きさを25pxに設定*/
+  font-family: "Montserrat-VariableFont_wght", sans-serif;                     /*店舗詳細画面クラスshopdetailnameで店名ZenMaruGothic-Boldに設定*/
+    
+}
+header a {
+  text-decoration: none;                                       /*ヘッダーにて立花商店街のリンクの下線をなしに設定*/
+  
+    
+}
+
+header img {
+  max-height: 30px;                                           /*ヘッダーにて立花商店街のロゴ画像の高さを最大30pxに設定*/ 
+    
+}
+
+header ul {                                                    
+  margin: 0;                                                     /*ヘッダーにて項目を横並びに設定*/
+  display: flex;
+}
+
+
+header li {
+   margin: 0 0 0 40px;                                            /*ヘッダーにて項目のマージン左40px設定*/
+   font-size: 20px;                                               /*ヘッダーにて項目の字の大きさを200px設定*/
+}
+header nav {
+   margin: 0 0 0 auto;                                           /*ヘッダーにてナビゲーションで左側をautoにx設定*/
+}
+
+.PClogoArea a {
+  color:white;
+  background-color: skyblue;
+  padding:15px 40px;
+  border-radius: 15px;
+    
+}
+
+.PClogoArea a:hover {
+ text-decoration: underline;
+ color:skyblue;
+ background-color: white;
+ border:3px solid skyblue;
+}
+
+.category{
+ margin-top: 24PX;    
+}
+
+.btn-social-icon-facebook {
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  color: #4966a0;;
+  font-size: 25px;
+  text-decoration: none;
+}
+
+.btn-social-icon-facebook:hover {
+  color:#668ad8;
+  transition: .5s;
+}
+
+.btn-social-icon-facebook__square {
+  border-radius: 10px;
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  font-size: 35px;
+  line-height: 50px;
+  color: #FFF;
+  background: #4966a0;
+}
+
+.btn-social-icon-facebook__square  div {
+  position: absolute;
+  bottom: -6px;
+  right: 10px;
+  font-size: 42px;
+  font-weight: 900;
+}
+
+
+
+
+/*================================
+shoppingstreet画面の設定
+=================================*/
+/*================================
+ホーム(home)の設定
+=================================*/
+main {
+    background-color: white;
+}
+.home_description {
+    
+    padding-top: 240px;                                      /*クラスhome_descriptionに上下240pxを設定*/
+    padding-bottom: 240px;
+    text-align: center;                                      /*クラスhomeに行揃え中央に設定*/
+    background-image: url('../../images/home/shoptop.png');    /*クラスhomeにimagesフォルダ内のshoptop.pngの画像を表示*/ 
+    background-repeat:no-repeat;                             /*クラスhomeに背景の繰り返しをなしに設定*/
+    background-size:cover;                                   /*クラスhomeに 背景サイズをcoverに設定*/
+    background-position: center;                             /*クラスhomeに背景画像中央に設定*/
+}
+
+.home_college_topic {
+    display:flex;                            /*クラスhome__college_topicの横並びに設定*/
+    height: 600px;                            /*クラスhome__college_topicの立花商店街大学に高さ600pxを設定*/
+    margin-top: 56px;                   /*クラスhome__college_topicの立花商店街大学にマージン上56pxを設定*/
+    margin-left:5%;                   /*クラスhome__college_topicの立花商店街大学にマージン左5%を設定*/
+    margin-right:5%;                  /*クラスhome__college_topicの立花商店街大学に右5%を設定*/
+    background-color: white;             /*クラスhome__college_topicの背景色白を設定*/    
+    padding-bottom: 0px;                 /*クラスhome__college_topicの立花商店街大学に下0pxを設定*/
+    align-items:center;                 /*クラスhome__college_topicの立花商店街大学説明に交差軸方向中央を設定*/
+    border: solid #000;            /*クラスhome__college_topicの立花商店街大学に下0pxを設定*/
+    border-width:50%;              /*クラスhome__college_topicの立花商店街大学に枠線の太さ30%を設定*/
+    border-radius:15px;            /*クラスhome__college_topicの立花商店街大学に枠線の丸く設定*/
+    
+    
+}
+
+.home_college_description {
+    width: 40%;                                /*クラスhome__college_descriptinの立花商店街大学説明に幅を40%に設定*/
+    padding-left: 4%;                        /*クラスhome__college_photo立花商店街大学写真のパディング左5%を設定*/
+    
+}
+
+.home_college_description h2 {
+    font-size: 48px;                            /*クラスhome__college_descriptinの「立花商店街」に文字48pxを設定*/
+    margin-bottom: 48px;                        /*クラスhome__college_descriptinの「立花商店街」にマージン下48pxに設定*/                   
+    text-align: center;                         /*クラスhome__college_descriptinの「立花商店街」に中央ぞろえに設定*/
+}
+.home_college_description p {
+    font-size: 36px;                            /*クラスhome__college_descriptinの「立花商店街」に文字36pxを設定*/
+    margin-bottom: 48px;                        /*クラスhome__college_descriptinの「講師は立花商店街の店主～」にマージン下48pxに設定*/
+    text-align: center;                         /*クラスhome__college_descriptinの「講師は立花商店街の店主～」に中央ぞろえを設定*/                        
+}
+
+.home_college_photo {                                
+    padding-left: 7%;                        /*クラスhome__college_photo立花商店街大学写真のパディング左5%を設定*/
+}
+.home_college_photo img{
+    width: 800px;                              /*クラスhome__college_photo img立花商店街大学の写真の幅を800pxに設定*/
+    height: 500px;                            /*クラスhome__college_photo img立花商店街大学の写真の高さを500pxに設定*/
+}
+
+
+
+
+.home_description2 {
+    padding-top: 240px;                                      /*セクションタグgreetingに上下240pxを設定*/
+    padding-bottom: 240px;
+    text-align: center;                                      /*セクションタグgreetingに行揃え中央に設定*/
+    background-image: url('../../images/');    /*セクションタグgreetingにimagesフォルダ内のshoptop.pngの画像を表示*/ 
+    background-repeat:no-repeat;                             /*セクションタグgreetingに背景の繰り返しをなしに設定*/
+    background-size:cover;                                   /*セクションタグgreetingに 背景サイズをcoverに設定*/
+    background-position: center;                             /*セクションタグgreetingに背景画像中央に設定*/
+}
+
+
+
+#news {
+    
+    padding: 56px 0px 56px;                   /*セクションnewsにパティングに上56px,下0px,左右0pxを設定*/
+    text-align:center;                        /*セクションnews内の立花ニュースを中央に設定*/
+    
+}
+
+#news h2 {                                    /*セクションnews内の立花ニュースのフォントサイズ48pxに設定*/
+    font-size: 48px;
+}
+
+.news_topic {
+    display:flex;                             /*クラスnews_topicに「立花ニュース」の表示フレックスボックスを設定*/
+    height: 800px;                            /*クラスnews_topicの立花商店街大学に高さ800pxを設定*/
+    border: solid #000;
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: white;
+}
+
+.news_movie {                                /*クラスnews_movieYoutube動画の設定*/
+    margin-top: 50px;                        /*クラスnews_movieのmargin上40pxを設定*/
+    margin-left: 13%;                        /*クラスnews_movieのmargin左13%を設定*/
+    margin-right:5%;                        /*クラスnews_movieのmargin右5%を設定*/
+}
+
+.news_description {
+    margin-top: 150px;
+    margin-left: 5%;                        /*クラスhome__college_topicの立花商店街大学にマージン左5%を設定*/
+    margin-right: 5%;
+}
+
+
+#information {
+     padding: 56px 0px 56px;                   /*セクションinformationにパティングに上56px,下0px,左右0pxを設定*/
+     height: 600px;
+}
+
+#information h2 {
+    font-size: 48px;                        /*セクションinformation内のINFORMATIONのフォントサイズ48pxに設定*/
+    text-align:center;                        /*セクションinformation内のINFORMAITONを中央に設定*/
+    
+    
+}
+
+/*================================
+以下店舗一覧画面の設定
+=================================*/
+/*================================
+店舗項目の設定
+=================================*/
+.shoplistwhole {
+    max-width: 1280px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "ZenMaruGothic-Bold", sans-serif;
+}
+.card-body{
+    padding-top:40px;
+    
+}
+
+.shop_category {
+    width: 80%;
+    margin: 30px auto; 
+}
+.shop_category th{
+    padding: 0 10px; 
+}
+
+.iphoneshop_category {      /*スマホ版店舗一覧の設定*/
+    width: 80%;
+    margin: 30px auto;
+    
+    
+}
+
+.iphoneshop_category td{   /*スマホ版店舗一覧画面の店舗分類設定*/
+    padding:10px 1%;
+    text-align: center;
+}
+
+
+.all button{
+    color:BlueViolet;
+    background-color: white;
+    border-radius: 15px;
+    border:3px solid BlueViolet;
+    padding:10px 10px;  
+}
+
+.all button:hover {
+ text-decoration: underline;
+ color:white;
+ background-color: BlueViolet;
+ border:3px solid BlueViolet;
+}
+
+.drinkeat button{
+    color:#FFCC00;
+    background-color: white;
+    border-radius: 15px;
+    border:3px solid #FFCC00;
+    padding:10px 10px;
+}
+.drinkeat button:hover {
+ text-decoration: underline;
+ color:white;
+ background-color: #FFCC00;
+ border:3px solid #FFCC00;
+} 
+
+.FoodBeverages button{
+    color:mediumturquoise;
+    background-color: white;
+    border-radius: 15px;
+    border:3px solid mediumturquoise;
+    padding:10px 10px;
+}
+.FoodBeverages button:hover {
+ text-decoration: underline;
+ color:white;
+ background-color: mediumturquoise;
+ border:3px solid mediumturquoise;
+}
+
+.fashion button{
+    color:lawngreen;
+    background-color: white;
+    border-radius: 15px;
+    border:3px solid lawngreen;
+    padding:10px 10px;
+}
+.fashion button:hover {
+ text-decoration: underline;
+ color:white;
+ background-color: lawngreen;
+ border:3px solid lawngreen;
+}
+
+.lifestyle button{
+    color:violet;
+    background-color: white;
+    border-radius: 15px;
+    border:3px solid violet;
+    padding:10px 10px;
+}
+.lifestyle button:hover {
+ text-decoration: underline;
+ color:white;
+ background-color: violet;
+ border:3px solid violet;
+}
+
+.beauty button{
+    color:dodgerblue;
+    background-color: white;
+    border-radius: 15px;
+    border:3px solid dodgerblue;
+    padding:10px 10px;
+}
+.beauty button:hover {
+ text-decoration: underline;
+ color:white;
+ background-color: dodgerblue;
+ border:3px solid dodgerblue;
+}
+
+.hobby button{
+    color:crimson;
+    background-color: white;
+    border-radius: 15px;
+    border:3px solid crimson;
+    padding:10px 10px;
+}
+.hobby button:hover {
+ text-decoration: underline;
+ color:white;
+ background-color: crimson;
+ border:3px solid crimson;
+}
+
+.medical button{
+    color:burlywood;
+    background-color: white;
+    border-radius: 15px;
+    border:3px solid burlywood;
+    padding:10px 10px;
+}
+.medical button:hover {
+ text-decoration: underline;
+ color:white;
+ background-color: burlywood;
+ border:3px solid burlywood;
+}
+
+/*================================
+店舗一覧トップページの設定
+=================================*/
+.shoplisttopimage {
+    display:flex;
+    
+    height: 796px;
+    width: 100%;
+    background-image: url(../../images/home/shoplisttop.png);
+    
+}
+
+.shoplisttoptitle {
+    width:50%;
+    padding-left: 10%;
+    padding-top: 12%;
+    padding-bottom: 10%;
+    
+}
+.shoplisttoptitle h2 {
+    font-size: 8.0rem;
+    font-family: "ZenMaruGothic-Bold", sans-serif;
+    text-align:center; 
+}
+
+.shoplisttoptitle p {
+    font-size: 3.0rem;
+    text-align:center;
+    
+}
+
+.shoplisttopicon {
+    width: 50%;
+    padding-right: 15%;
+    padding-left: 5%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+
+.shoplisttopcoment {
+    width:100%;
+    padding-left:10%;
+    padding-right:10%;
+    text-align: center;
+}
+
+.shoplisttopcoment p {
+    font-size: 2.5rem;
+    font-family: "ZenMaruGothic-Bold", sans-serif;
+}
+
+.shoplisttrasition {
+    width:100%;
+    padding-left:10%;
+    padding-right:10%;
+    text-align: center;
+}
+
+.shoplisttrasition button{
+    width:20%;
+    font-size: 2.0rem;
+    color:lightgrey;
+    background-color: white;
+    border-radius: 15px;
+    border:3px solid lightgrey;
+    padding:10px 10px;
+    margin-bottom: 24px;
+}
+.shoplisttrasition button:hover {
+    text-decoration: underline;
+    color:white;
+    background-color: lightgrey;
+    border:3px solid lightgrey;
+}
+
+.iphoneshoplisttopimage {
+    display:flex;
+    
+    height: 400px;
+    width: 100%;
+    background-image: url(../../images/home/shoplisttop.png);
+    background-size:105% auto;
+}
+
+.iphoneshoplisttoptitle {                           /*スマホ版shoplisttopページタイトルの設定*/
+    width:50%;
+    padding-left: 10%;
+    padding-top: 12%;
+    padding-bottom: 10%;
+    
+}
+.iphoneshoplisttoptitle h2 {                        /*スマホ版shoplisttopページタイトルの設定*/    
+    font-size: 4.0rem;
+    font-family: "ZenMaruGothic-Bold", sans-serif;
+    text-align:center; 
+}
+
+.iphoneshoplisttoptitle p {                        /*スマホ版shoplisttopページタイトルの設定*/
+    font-size: 1.5rem;
+    text-align:center;
+    
+}
+
+.iphoneshoplisttopicon {                            /*スマホ版shoplisttopページタイトルの設定*/                                
+    width: 50%;
+    padding-right: 15%;
+    padding-left: 5%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+.iphoneshoplisttopcoment {                        /*スマホ版shoplisttopページタイトルの設定*/
+    width:100%;
+    padding-left:10%;
+    padding-right:10%;
+    text-align: center;
+}
+
+.iphoneshoplisttopcoment p {                            /*スマホ版shoplisttopページタイトルの設定*/
+    font-size: 1.5rem;
+    font-family: "ZenMaruGothic-Bold", sans-serif;
+}
+
+
+
+
+/*================================
+店舗一覧の設定
+=================================*/
+.shopheader {
+    height:90px; 
+    font-family: "Montserrat-VariableFont_wght", sans-serif;
+    
+}
+
+.shopheader a{
+    color:black;
+    
+}
+.item-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    padding-right: 8%;
+    padding-left: 8%;
+}
+
+.iphoneitem-container {    /*スマホ版店舗一覧にて店舗一覧iphoneitem-containerのクラス設定*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    padding-right: 4%;
+    padding-left: 4%;
+}
+
+
+.item-container a{
+    text-decoration:none; 
+}
+
+.iphoneitem-container a{            /*スマホ版店舗一覧にて店舗一覧iphoneitem-containerのクラス設定*/
+    text-decoration:none; 
+}
+
+.shopnamelist {                                                      /*店舗詳細画面クラスshopdetailnameで店名の設定*/
+    font-family: "ZenMaruGothic-Bold", sans-serif;                     /*店舗詳細画面クラスshopdetailnameで店名ZenMaruGothic-Boldに設定*/
+    height: 450px;                                                     /*店舗詳細画面クラスshopdetailnameで高さ450pxに設定*/
+    width:100%;                                                        /*店舗詳細画面クラスshopdetailnameで幅100%に設定*/
+    background-image:url(../../images/home/shopdetailshopname.png);    /*店舗名の背景画像を田中さんが送付頂いた画像に設定*/
+    text-align:center;  /*店舗名を真ん中に設定*/
+    
+}
+.shopnamelist p {
+    padding-top: 140px;
+    font-size: 3rem;
+    
+}
+
+
+
+.eatdrinkitem {
+    width: 25%;
+    padding: 0px;
+    margin-right: 3%;
+    margin-left: 3%;
+    margin-bottom: 40px;
+    border:3px solid #FFCC00;
+    font-size: 1.0rem;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transform: translateY(0);
+    
+}
+
+.eatdrinkitem:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    
+    
+}
+.foodbeverageitem {
+    width: 25%;
+    padding: 0px;
+    margin-right: 3%;
+    margin-left: 3%;
+    margin-bottom: 40px;
+    border:3px solid mediumturquoise;
+    font-size: 1.0rem;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transform: translateY(0);
+}
+
+
+.foodbeverageitem:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+
+.fashionableitem {
+    width: 25%;
+    padding: 0px;
+    margin-right: 3%;
+    margin-left: 3%;
+    margin-bottom: 40px;
+    border:3px solid lawngreen;
+    font-size: 1.0rem;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transform: translateY(0);
+    
+}
+
+.fashionableitem:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    
+    
+}
+
+.lifestyleitem {
+    width: 25%;
+    padding: 0px;
+    margin-right: 3%;
+    margin-left: 3%;
+    margin-bottom: 40px;
+    border:3px solid violet;
+    font-size: 1.0rem;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transform: translateY(0);
+}
+
+
+
+.lifestyleitem:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    
+}
+
+
+
+
+.beautyitem {
+    width: 25%;
+    padding: 0px;
+    margin-right: 3%;
+    margin-left: 3%;
+    margin-bottom: 40px;
+    border:3px solid dodgerblue;
+    font-size: 1.0rem;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transform: translateY(0);
+}
+
+.beautyitem:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    
+}
+
+
+
+.hobbyitem {
+    width: 25%;
+    padding: 0px;
+    margin-right: 3%;
+    margin-left: 3%;
+    margin-bottom: 40px;
+    border:3px solid crimson;
+    font-size: 1.0rem;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transform: translateY(0);
+}
+
+.hobbyitem:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    
+}
+
+.medicalitem {
+    width: 25%;
+    padding: 0px;
+    margin-right: 3%;
+    margin-left: 3%;
+    margin-bottom: 40px;
+    border:3px solid burlywood;
+    font-size: 1.0rem;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transform: translateY(0);
+}
+
+.medicalitem:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    
+}
+
+.item-container img{
+
+    width:105%;
+    height:170px;
+}
+
+.iphoneitem-container img {   /*スマホ版店舗一覧画面にて店舗一覧iphoneitem-containerクラスで画像を設定*/
+    width: 105%;
+    height: 170px;
+}
+
+
+
+.shop_name{
+     font-weight:bold;
+     font-size: 1.5rem;
+     color: #000000;
+     padding-left: 3%;
+}
+
+
+
+.eatdrinkcategory{
+    color:white;
+    background-color: #FFCC00;
+    border-radius: 15px;
+    border:5px solid #FFCC00;
+    padding:0.5%;
+    margin-left: 3%;
+    width: 120px;
+    text-align: center;
+}
+
+.foodbeveragecategory {
+    color:white;
+    background-color: mediumturquoise;
+    border-radius: 15px;
+    border:5px solid mediumturquoise;
+    padding:0.5%;
+    margin-left: 3%;
+    width: 120px;
+    text-align: center;
+}
+
+.fashionablecategory {
+    color:white;
+    background-color: lawngreen;
+    border-radius: 15px;
+    border:5px solid lawngreen;
+    padding:0.5%;
+    margin-left: 3%;
+    width: 120px;
+    text-align: center;
+}
+
+.lifestylecategory {
+    color:white;
+    background-color: violet;
+    border-radius: 15px;
+    border:5px solid violet;
+    padding:0.5%;
+    margin-left: 3%;
+    width: 120px;
+    text-align:center
+}
+
+.beautycategory {
+    color:white;
+    background-color: dodgerblue;
+    border-radius: 15px;
+    border:5px solid dodgerblue;
+    padding:0.5%;
+    margin-left: 3%;
+    width: 160px;
+    text-align:center;
+
+}
+
+.hobbycategory {
+    color:white;
+    background-color: crimson;
+    border-radius: 15px;
+    border:5px solid crimson;
+    padding:0.5%;
+    margin-left: 3%;
+    width: 160px;
+    text-align:center;
+
+}
+
+.medicalcategory {
+    color:white;
+    background-color: burlywood;
+    border-radius: 15px;
+    border:5px solid burlywood;
+    padding:0.5%;
+    margin-left: 3%;
+    width: 160px;
+    text-align:center;
+
+}
+
+.shop_summary{
+    height:90px;
+    color: #000000;
+    padding-left: 3%;
+    padding-right: 3%;
+    font-size: 1.0rem;
+}
+
+.shop_revise button{
+    margin: 15px;
+}
+
+.shop_revise{
+    display:flex;
+
+}
+
+.shop_revise form{
+    margin-left:10%;
+    
+    
+}
+
+/*「食べる・飲む」店舗一覧の更新・削除ボタンの設定*/
+.shop_revise_eatdrink button{
+    margin: 15px;
+    color:white;
+    background-color: #FFCC00;
+    border-radius: 15px;
+    border:3px solid #FFCC00;
+    padding:10px 10px;
+    
+}
+
+.shop_revise_eatdrink button:hover{
+    text-decoration: underline;
+    color:#FFCC00;
+    background-color: white;
+    border:3px solid #FFCC00;
+    
+}
+
+.shop_revise_eatdrink{
+    display:flex;
+
+}
+
+.shop_revise_eatdrink form{
+    margin-left:10%;
+    
+    
+}
+
+/*「食料品・飲料」店舗一覧の更新・削除ボタンの設定*/
+.shop_revise_foodbeverage button{
+    margin: 15px;
+    color:white;
+    background-color: mediumturquoise;
+    border-radius: 15px;
+    border:3px solid mediumturquoise;
+    padding:10px 10px;
+    
+}
+
+.shop_revise_foodbeverage button:hover{
+    text-decoration: underline;
+    color:mediumturquoise;
+    background-color: white;
+    border:3px solid mediumturquoise;
+    
+}
+
+.shop_revise_foodbeverage{
+    display:flex;
+
+}
+
+.shop_revise_foodbeverage form{
+    margin-left:10%;
+    
+    
+}
+ 
+
+/*「おしゃれ」店舗一覧の更新・削除ボタンの設定*/
+.shop_revise_fashionable button{
+    margin: 15px;
+    color:white;
+    background-color: lawngreen;
+    border-radius: 15px;
+    border:3px solid lawngreen;
+    padding:10px 10px;
+    
+}
+
+.shop_revise_fashionable button:hover{
+    text-decoration: underline;
+    color:lawngreen;
+    background-color: white;
+    border:3px solid lawngreen;
+    
+}
+
+.shop_revise_fashionable{
+    display:flex;
+
+}
+
+.shop_revise_fashionable form{
+    margin-left:10%;
+    
+    
+}
+
+
+/*「暮らし」店舗一覧の更新・削除ボタンの設定*/
+.shop_revise_lifestyle button{
+    margin: 15px;
+    color:white;
+    background-color: violet;;
+    border-radius: 15px;
+    border:3px solid violet;;
+    padding:10px 10px;
+    
+}
+
+.shop_revise_lifestyle button:hover{
+    text-decoration: underline;
+    color:violet;;
+    background-color: white;
+    border:3px solid violet;
+    
+}
+
+.shop_revise_lifestyle{
+    display:flex;
+
+}
+
+.shop_revise_lifestyle form{
+    margin-left:10%;
+    
+    
+}
+
+
+/*「美容・理容・エステ」店舗一覧の更新・削除ボタンの設定*/
+.shop_revise_beauty button{
+    margin: 15px;
+    color:white;
+    background-color: dodgerblue;
+    border-radius: 15px;
+    border:3px solid dodgerblue;
+    padding:10px 10px;
+    
+}
+
+.shop_revise_beauty button:hover{
+    text-decoration: underline;
+    color:dodgerblue;
+    background-color: white;
+    border:3px solid dodgerblue;
+    
+}
+
+.shop_revise_beauty{
+    display:flex;
+
+}
+
+.shop_revise_beauty form{
+    margin-left:10%;
+    
+    
+}
+
+
+/*「趣味・レジャー」店舗一覧の更新・削除ボタンの設定*/
+.shop_revise_hobby button{
+    margin: 15px;
+    color:white;
+    background-color: crimson;
+    border-radius: 15px;
+    border:3px solid crimson;
+    padding:10px 10px;
+    
+}
+
+.shop_revise_hobby button:hover{
+    text-decoration: underline;
+    color:crimson;
+    background-color: white;
+    border:3px solid crimson;
+    
+}
+
+.shop_revise_hobby{
+    display:flex;
+
+}
+
+.shop_revise_hobby form{
+    margin-left:10%;
+    
+    
+}
+
+
+/*「医療・健康」店舗一覧の更新・削除ボタンの設定*/
+.shop_revise_medical button{
+    margin: 15px;
+    color:white;
+    background-color: burlywood;
+    border-radius: 15px;
+    border:3px solid burlywood;
+    padding:10px 10px;
+    
+}
+
+.shop_revise_medical button:hover{
+    text-decoration: underline;
+    color:burlywood;
+    background-color: white;
+    border:3px solid burlywood;
+    
+}
+
+.shop_revise_medical{
+    display:flex;
+
+}
+
+.shop_revise_medical form{
+    margin-left:10%;
+    
+    
+}
+
+.row{
+    padding-bottom: 20px;
+    padding-right:8%;
+    padding-left:8%;
+    width:100%;
+}
+
+.shoplink {
+    padding-left: 45%;
+    padding-right: 40%;
+}
+
+/*================================
+店舗一覧内の店舗新規ボタンの設定
+=================================*/
+.ml-auto {
+    padding-left: 8%;
+}
+.newshop {
+    width: 160px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin: 20px;
+    height: 55px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 50px;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.newshop:hover {
+  background-position: 100% 0;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+.newshop:focus {
+  outline: none;
+}
+
+.newshop.bn23 {
+  background-image: linear-gradient(
+    to right,
+    #25aae1,
+    #40e495,
+    #30dd8a,
+    #2bb673
+  );
+  box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+}
+
+/*================================
+店舗新規登録画面の設定
+=================================*/
+.NewRegister {                    /*「食べる・飲む」,「食料品・飲料」,「おしゃれ」,「暮らし」,*「美容・理容」,[趣味・レジャー],「医療・健康」の新規登録画面のmainからfooter部分を調整*/
+    display: flex;                
+    flex-direction: column;
+    min-height: 100vh;
+    background: white;
+}
+
+.NewRegister h1{                    /*「食べる・飲む」,「食料品・飲料」,「おしゃれ」,「暮らし」,*「美容・理容」,*/
+                                    /* [趣味・レジャー],「医療・健康」の新規登録画面の[店舗登録ページ]の調整*/
+    margin: 1%;                     /* [店舗登録ページ]をmargin上下左右1%に設定する*/
+
+}
+
+/*================================
+立花商店街ホームの設定
+=================================*/
+
+/*================================
+店舗詳細画面の設定
+=================================*/
+
+
+
+.shopdetailheaderlink a{
+
+    color:black;
+}
+
+.shopdetailheaderlink p{
+    margin-top: 1rem;
+    margin-bottom: 1rem
+}
+
+.item {
+    display:flex;                             /*店舗詳細画面クラスitemの「店舗名」～「店舗説明」に表示フレックスボックスを設定*/
+    flex-direction: row;              /*店舗詳細画面クラスitemの「店舗名」～「店舗説明」に向き左から右を設定*/
+    width: 100%;                                  /*店舗詳細画面クラスitemの「店舗名」～「店舗説明」に交差軸方向中央を設定*/  
+    
+    
+}
+
+.shopdetailname {                                                      /*店舗詳細画面クラスshopdetailnameで店名の設定*/
+    font-family: "ZenMaruGothic-Bold", sans-serif;                     /*店舗詳細画面クラスshopdetailnameで店名ZenMaruGothic-Boldに設定*/
+    height: 450px;                                                     /*店舗詳細画面クラスshopdetailnameで高さ450pxに設定*/
+    width:100%;                                                        /*店舗詳細画面クラスshopdetailnameで幅100%に設定*/
+    background-image:url(../../images/home/shopdetailshopname.png);    /*店舗名の背景画像を田中さんが送付頂いた画像に設定*/
+    text-align:center;                                                /*店舗名を真ん中に設定*/
+    
+}
+
+.shopdetailname p {
+    padding-top: 140px;        /*クラスshopdetail店舗名をpadding-top140pxに設定*/
+    font-size: 3rem;            /*店舗名を64pxに設定*/
+    
+}
+
+.shopphoto {
+    flex-grow: 1;                           /*店舗詳細画面クラスitemの「店舗名」～「店舗画像」に余白の余りがある場合に、その余白を指定した数値で割り振るを設定*/
+    width:50%;                              /*店舗画像クラスshopphoto幅50%に設定*/
+    padding-top: 60px;                      /*店舗詳細画面クラスshopdetailの「郵便番号」～「店舗説明」に上余白80pxを設定*/
+    
+}
+
+.shopphoto img{
+    width: 90%;                /*店舗画像幅90%に設定*/
+    height: 420px;            /*店舗画像高さ920pxに設定*/
+    
+}
+
+
+.shopdetail {
+    font-family: "ZenMaruGothic-Bold", sans-serif;        /*店舗詳細画面クラスshopdetailnameで店名ZenMaruGothic-Boldに設定*/
+    flex-grow: 1;                                          /*店舗詳細画面クラスitemの「店舗名」～「店舗説明」に余白の余りがある場合に、その余白を指定した数値で割り振るを設定*/
+    padding-top: 60px;                                     /*店舗詳細画面クラスshopdetailの「郵便番号」～「店舗説明」に上余白60pxを設定*/
+    width:50%;
+}
+
+.shopdetail label {
+    font-weight:bold;            /*店舗詳細画面クラスshopdetailの「郵便番号」～「店舗説明」に字体boldを設定*/
+                 
+}
+
+
+
+
+
+
+/*================================
+店舗詳細画面「食べる・飲む」の設定
+=================================*/
+
+.shopdetaileatdrinkcategory {             /*食べる・飲むの店舗詳細画面の「郵便番号」～「定休日」の設定*/
+    line-height: 2.0;                     /*項目ごとの行幅*/
+    width: 90%;                        /*「郵便番号」～「定休日」横の広さ150%を設定*/
+    font-size: 2.0rem;                    /*「郵便番号」～「定休日」の文字20pxを設定*/
+    border-radius: 0 15px 15px 0;            /*右側の角だけ丸く*/
+    border-bottom: 1px solid #FFCC00;   /*「郵便番号」～「定休日」のボーダ下線#FFCC00の色を設定*/
+    padding: 0.5em;                     /*「郵便番号」～「定休日」のpadding0.5emを設定*/
+}
+
+.shopdetaildrinkeatshopexplain {            /*店舗詳細画面クラスshopdetailの「店舗説明」の設定                            */
+    font-size: 2.0rem;                        /*店舗詳細画面クラスshopdetailの「店舗説明」にfontsize20pxを設定*/
+    line-height: 2.0;                        /*項目ごとの行幅*/
+    width: 90%;                              /*「郵便番号」～「店舗説明」横の広さ60%を設定*/
+    border-radius: 0 15px 15px 0;            /*右側の角だけ丸く*/
+    padding: 0.5em;                        /*「郵便番号」～「定休日」のpadding0.5emを設定*/
+    margin-top: 10px;                       /*「食べる・飲む」と「店舗説明の間にpadding上60pxを設定*/
+    padding-bottom: 25px;                    /*「店舗説明」と「郵便番号」の間にpadding下65pxを設定*/
+    border-bottom: 1px solid #FFCC00;   /*「郵便番号」～「定休日」のボーダ下線#FFCC00の色を設定*/
+    
+}
+
+
+.shopdetaildrinkeat button{            /*店舗詳細画面クラスshopdetailの「食べる・飲む」のボタン設定*/
+    color:white;                        /*色を白に設定*/
+    background-color: #FFCC00;          /*背景色#FFCC00に設定*/
+    border-radius: 15px;                /*角を丸くする*/
+    border:3px solid #FFCC00;            /*ボタンにマウスを合わせた際にボーダー#FFCC00を設定*/
+    padding:10px 10px;                   /*「食べる・飲む」ボタンのpadding10pxを設定*/
+    margin-top: 8px;        /*店舗詳細画面クラスshopdetailの「店舗説明」にmargintop8pxを設定*/
+    margin-bottom: 12px;        /*店舗詳細画面クラスshopdetailの「店舗説明」にmarginbottom12pxを設定*/
+    font-size: 2rem;            /*「食べる・飲む」の文字16pxを設定*/
+}
+
+.shopdetaildrinkeatback {
+    margin-top: 36px;        /*店舗詳細画面クラスshopdetaildrnkeatbackの「一覧に戻る」にmargintop12pxを設定*/
+    margin-bottom: 24px;        /*店舗詳細画面クラスshopdetailの「店舗説明」にmarginbottom24pxを設定*/
+
+}
+.shopdetaildrinkeatback button{        /*店舗詳細画面クラスshopdetaildrinkeatbackの「一覧に戻る」のボタン設定*/
+    color:white;                        /*色を白に設定*/
+    background-color: #FFCC00;          /*背景色#FFCC00に設定*/
+    border-radius: 15px;                /*角を丸くする*/
+    border:3px solid #FFCC00;            /*ボタンにマウスを合わせた際にボーダ#FFCC00を設定*/
+    padding:10px 10px;                    /*「食べる・飲む」ボタンのpadding10pxを設定*/
+    font-size: 2rem;                    /*「食べる・飲む」の文字16pxを設定*/
+    font-family: "ZenMaruGothic-Bold", sans-serif;        /*店舗詳細画面クラスshopdetailnameで「一覧に戻る」にZenMaruGothic-Boldに設定*/
+    width: 15%;   
+}
+
+.shopdetaildrinkeatback button:hover {    /*店舗詳細画面クラスshopdetaildrinkeatbackの「一覧に戻る」にマウスを合わせた際にボタン設定*/
+ text-decoration: underline;                /*ボタンにマウスを合わせた際にボーダ#FFCC00を設定*/
+ color:#FFCC00;                    /*色#FFCC00に設定*/
+ background-color: white;            /*拝啓色を白に設定*/            
+ border:3px solid #FFCC00;        /*ボタンにマウスを合わせた際にボーダ#FFCC00を設定*/
+}
+
+.shopdetailfooterlogo {
+    background-image: url('../../images/home/shopdetailfooter.png');
+    text-align: center;
+    padding: 20px;
+    height:280px;
+}
+
+.shopdetailfooterlogo p{
+    padding-top: 220px;
+}
+/*================================
+店舗詳細画面「食料品・飲料」の設定
+=================================*/
+.shopdetailfoodbeveragecategory {             /*食料品・飲料の店舗詳細画面の「郵便番号」～「店舗説明」の設定*/
+    line-height: 2.0;                     /*項目ごとの行幅*/
+    width: 90%;                        /*「郵便番号」～「定休日」横の広さ150%を設定*/
+    font-size: 2.0rem;                    /*「郵便番号」～「定休日」の文字20pxを設定*/
+    border-radius: 0 15px 15px 0;            /*右側の角だけ丸く*/
+    border-bottom: 1px solid mediumturquoise;   /*「郵便番号」～「定休日」のボーダ下線#FFCC00の色を設定*/
+    padding: 0.5em;
+}
+
+
+
+
+.shopdetailfoodbeverageshopexplain { /*店舗詳細画面クラスshopdetailの「店舗説明」にfontsize20pxを設定*/
+    font-size: 2.0rem;             
+    line-height: 2.0;
+    width: 90%;
+    border-radius: 0 15px 15px 0;
+    padding: 0.5em;
+    margin-top: 10px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid mediumturquoise;                /*「郵便番号」～「定休日」のpadding0.5emを設定*/
+}
+
+.shopdetailfoodbeverage button{
+    color:white;                        /*色を白に設定*/
+    background-color: mediumturquoise;    /*背景色mediumturquoiseに設定*/
+    border-radius: 15px;                    /*角を丸くする*/
+    border:3px solid mediumturquoise;        /*ボタンにマウスを合わせた際にボーダmediumturquoiseを設定*/
+    padding:10px 10px;                /*「食べる・飲む」ボタンのpadding10pxを設定*/
+    margin-bottom: 20px;        /*店舗詳細画面クラスshopdetailの「食料品・飲料」にmarginbottom20pxを設定*/
+    margin-top: 8px;        /*店舗詳細画面クラスshopdetailの「店舗説明」にmargintop8pxを設定*/
+    font-size: 2rem;            /*店舗詳細画面クラスshopdetailの「食料品・飲料」ボタンにfontsize16pxを設定*/
+}
+
+.shopdetailfoodbeverageback {
+    margin-top: 36px;        /*店舗詳細画面クラスshopdetailfoodbeveragebackの「一覧に戻る」にmargintop12pxを設定*/
+    margin-bottom: 24px;        /*店舗詳細画面クラスshopdetailの「店舗説明」にmarginbottom24pxを設定*/
+
+}
+
+.shopdetailfoodbeverageback button{  /*店舗詳細画面クラスshopdetailfoodbeveragebackの「一覧に戻る」にマウスを合わせた際にボタン設定*/
+    color:white;                        /*色を白に設定*/
+    background-color: mediumturquoise;          /*背景色#FFCC00に設定*/
+    border-radius: 15px;                /*角を丸くする*/
+    border:3px solid mediumturquoise;            /*ボタンにマウスを合わせた際にボーダ#FFCC00を設定*/
+    padding:10px 10px;                    /*「食べる・飲む」ボタンのpadding10pxを設定*/
+    font-size: 2rem;                    /*「食べる・飲む」の文字16pxを設定*/
+    font-family: "ZenMaruGothic-Bold", sans-serif;        /*店舗詳細画面クラスshopdetailnameで「一覧に戻る」にZenMaruGothic-Boldに設定*/
+    width: 15%;
+}
+
+
+
+
+.shopdetailfoodbeverageback button:hover {
+ text-decoration: underline;        /*ボタンにマウスを合わせた際にunderlineを設定*/
+ color:mediumturquoise;                /*色mediumturquoiseに設定*/
+ background-color: white;                /*背景色を白に設定*/
+ border:3px solid mediumturquoise;        /*ボタンにマウスを合わせた際にボーダmediumturquoiseを設定*/
+}
+
+
+/*================================
+店舗詳細画面「おしゃれ」の設定
+=================================*/
+.shopdetailfashionablecategory {             /*「おしゃれ」の店舗詳細画面の「郵便番号」～「店舗説明」の設定*/
+    line-height: 2.0;                     /*項目ごとの行幅*/
+    width: 90%;                        /*「郵便番号」～「定休日」横の広さ150%を設定*/
+    font-size: 2.0rem;                    /*「郵便番号」～「定休日」の文字20pxを設定*/
+    border-radius: 0 15px 15px 0;            /*右側の角だけ丸く*/
+    border-bottom: 1px solid lawngreen;   /*「郵便番号」～「定休日」のボーダ下線#FFCC00の色を設定*/
+    padding: 0.5em; 
+}
+
+.shopdetailfashionableshopexplain {
+    font-size: 2.0rem;             
+    line-height: 2.0;
+    width: 90%;
+    border-radius: 0 15px 15px 0;
+    padding: 0.5em;
+    margin-top: 10px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid lawngreen;                /*「郵便番号」～「定休日」のpadding0.5emを設定*/
+}
+
+.shopdetailfashionable button{
+    color:white;                        /*色を白に設定*/
+    background-color: lawngreen;          /*背景色#FFCC00に設定*/
+    border-radius: 15px;                /*角を丸くする*/
+    border:3px solid lawngreen;            /*ボタンにマウスを合わせた際にボーダー#FFCC00を設定*/
+    padding:10px 10px;                   /*「食べる・飲む」ボタンのpadding10pxを設定*/
+    margin-top: 8px;        /*店舗詳細画面クラスshopdetailの「店舗説明」にmargintop8pxを設定*/
+    margin-bottom: 12px;        /*店舗詳細画面クラスshopdetailの「店舗説明」にmarginbottom12pxを設定*/
+    font-size: 2rem;            /*「食べる・飲む」の文字16pxを設定*/
+}
+
+.shopdetailfashionableback {
+    margin-top: 36px;        /*店舗詳細画面クラスshopdetailfoodbeveragebackの「一覧に戻る」にmargintop12pxを設定*/
+    margin-bottom: 24px;        /*店舗詳細画面クラスshopdetailの「店舗説明」にmarginbottom24pxを設定*/
+
+}
+
+.shopdetailfashionableback button{  /*店舗詳細画面クラスshopdetailfoodbeveragebackの「一覧に戻る」にマウスを合わせた際にボタン設定*/
+    color:white;                        /*色を白に設定*/
+    background-color: lawngreen;          /*背景色#FFCC00に設定*/
+    border-radius: 15px;                /*角を丸くする*/
+    border:3px solid lawngreen;            /*ボタンにマウスを合わせた際にボーダ#FFCC00を設定*/
+    padding:10px 10px;                    /*「食べる・飲む」ボタンのpadding10pxを設定*/
+    font-size: 2rem;                    /*「食べる・飲む」の文字16pxを設定*/
+    font-family: "ZenMaruGothic-Bold", sans-serif;        /*店舗詳細画面クラスshopdetailnameで「一覧に戻る」にZenMaruGothic-Boldに設定*/
+    width: 15%;   
+}
+
+.shopdetailfashionableback button:hover {
+ text-decoration: underline;                    /*ボタンにマウスを合わせた際にunderlineを設定*/
+ color:lawngreen;                               /*色lawngreenに設定*/
+ background-color: white;                       /*背景色を白に設定*/
+ border:3px solid lawngreen;                    /*ボタンにマウスを合わせた際にボーダlawngreenを設定*/
+}
+
+
+/*================================
+店舗詳細画面「暮らし」の設定
+=================================*/
+.shopdetaillifestylecategory {                  /*「暮らし」の店舗詳細画面の「郵便番号」～「店舗説明」の設定*/
+    line-height: 2.0;                     /*項目ごとの行幅*/
+    width: 90%;                        /*「郵便番号」～「定休日」横の広さ150%を設定*/
+    font-size: 2.0rem;                    /*「郵便番号」～「定休日」の文字20pxを設定*/
+    border-radius: 0 15px 15px 0;            /*右側の角だけ丸く*/
+    border-bottom: 1px solid violet;   /*「郵便番号」～「定休日」のボーダ下線#FFCC00の色を設定*/
+    padding: 0.5em; 
+}
+
+.shopdetaillifestyleshopexplain {
+    font-size: 2.0rem;             
+    line-height: 2.0;
+    width: 90%;
+    border-radius: 0 15px 15px 0;
+    padding: 0.5em;
+    margin-top: 10px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid violet;                /*「郵便番号」～「定休日」のpadding0.5emを設定*/
+}
+
+.shopdetaillifestyle button{
+    color:white;                        /*色を白に設定*/
+    background-color: violet;          /*背景色#FFCC00に設定*/
+    border-radius: 15px;                /*角を丸くする*/
+    border:3px solid violet;            /*ボタンにマウスを合わせた際にボーダー#FFCC00を設定*/
+    padding:10px 10px;                   /*「食べる・飲む」ボタンのpadding10pxを設定*/
+    margin-top: 8px;        /*店舗詳細画面クラスshopdetailの「店舗説明」にmargintop8pxを設定*/
+    margin-bottom: 12px;        /*店舗詳細画面クラスshopdetailの「店舗説明」にmarginbottom12pxを設定*/
+    font-size: 2rem;            /*「食べる・飲む」の文字16pxを設定*/
+}
+
+.shopdetaillifestyleback {
+    margin-top: 36px;        /*店舗詳細画面クラスshopdetailfoodbeveragebackの「一覧に戻る」にmargintop12pxを設定*/
+    margin-bottom: 24px;        /*店舗詳細画面クラスshopdetailの「店舗説明」にmarginbottom24pxを設定*/
+
+}
+.shopdetaillifestyleback button{              /*店舗詳細画面クラスshopdetailfoodbeveragebackの「一覧に戻る」にマウスを合わせた際にボタン設定*/
+    color:white;                        /*色を白に設定*/
+    background-color: violet;          /*背景色#FFCC00に設定*/
+    border-radius: 15px;                /*角を丸くする*/
+    border:3px solid violet;            /*ボタンにマウスを合わせた際にボーダ#FFCC00を設定*/
+    padding:10px 10px;                    /*「食べる・飲む」ボタンのpadding10pxを設定*/
+    font-size: 2rem;                    /*「食べる・飲む」の文字16pxを設定*/
+    font-family: "ZenMaruGothic-Bold", sans-serif;        /*店舗詳細画面クラスshopdetailnameで「一覧に戻る」にZenMaruGothic-Boldに設定*/
+    width: 15%; 
+}
+
+.shopdetaillifestyleback button:hover {
+ text-decoration: underline;        /*ボタンにマウスを合わせた際にボーダvioletを設定*/
+ color:violet;                      /*色violetに設定*/
+ background-color: white;                /*背景色を白に設定*/
+ border:3px solid violet;        /*ボタンにマウスを合わせた際にボーダvioletを設定*/
+}
+
+
+/*================================
+店舗詳細画面「美容・理容・エステ」の設定
+=================================*/
+.shopdetailbeautycategory {             /*「美容・理容・エステ」の店舗詳細画面の「郵便番号」～「店舗説明」の設定*/
+    line-height: 2.0;                     /*項目ごとの行幅*/
+    width: 90%;                        /*「郵便番号」～「定休日」横の広さ150%を設定*/
+    font-size: 2.0rem;                    /*「郵便番号」～「定休日」の文字20pxを設定*/
+    border-radius: 0 15px 15px 0;            /*右側の角だけ丸く*/
+    border-bottom: 1px solid dodgerblue;   /*「郵便番号」～「定休日」のボーダ下線#FFCC00の色を設定*/
+    padding: 0.5em; 
+}
+
+.shopdetailbeautyshopexplain {
+    font-size: 2.0rem;             
+    line-height: 2.0;
+    width: 90%;
+    border-radius: 0 15px 15px 0;
+    padding: 0.5em;
+    margin-top: 10px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid dodgerblue;                /*「郵便番号」～「定休日」のpadding0.5emを設定*/                       /*「郵便番号」～「定休日」のpadding0.5emを設定*/
+}
+
+.shopdetailbeauty button{
+    color:white;                        /*色を白に設定*/
+    background-color: dodgerblue;          /*背景色#FFCC00に設定*/
+    border-radius: 15px;                /*角を丸くする*/
+    border:3px solid dodgerblue;            /*ボタンにマウスを合わせた際にボーダ#FFCC00を設定*/
+    padding:10px 10px;                    /*「食べる・飲む」ボタンのpadding10pxを設定*/
+    font-size: 2rem;                    /*「食べる・飲む」の文字16pxを設定*/
+    font-family: "ZenMaruGothic-Bold", sans-serif;        /*店舗詳細画面クラスshopdetailnameで「一覧に戻る」にZenMaruGothic-Boldに設定*/
+    width: 40%;
+}
+
+.shopdetailbeautyback {
+    margin-top: 36px;        /*店舗詳細画面クラスshopdetailfoodbeveragebackの「一覧に戻る」にmargintop12pxを設定*/
+    margin-bottom: 24px;        /*店舗詳細画面クラスshopdetailの「店舗説明」にmarginbottom24pxを設定*/
+
+}
+
+.shopdetailbeautyback button{              /*店舗詳細画面クラスshopdetailfoodbeveragebackの「一覧に戻る」にマウスを合わせた際にボタン設定*/
+    color:white;                        /*色を白に設定*/
+    background-color: dodgerblue;          /*背景色#FFCC00に設定*/
+    border-radius: 15px;                /*角を丸くする*/
+    border:3px solid dodgerblue;            /*ボタンにマウスを合わせた際にボーダ#FFCC00を設定*/
+    padding:10px 10px;                    /*「食べる・飲む」ボタンのpadding10pxを設定*/
+    font-size: 2rem;                    /*「食べる・飲む」の文字16pxを設定*/
+    font-family: "ZenMaruGothic-Bold", sans-serif;        /*店舗詳細画面クラスshopdetailnameで「一覧に戻る」にZenMaruGothic-Boldに設定*/
+    width: 15%; 
+}
+
+.shopdetailbeautyback button:hover {
+ text-decoration: underline;        /*ボタンにマウスを合わせた際にボーダdodgerblueを設定*/
+ color:violet;                      /*色dodgerblueに設定*/
+ background-color: white;                /*背景色を白に設定*/
+ border:3px solid dodgerblue;        /*ボタンにマウスを合わせた際にボーダdodgerblueを設定*/
+}
+
+
+/*================================
+店舗詳細画面「趣味」の設定
+=================================*/
+.shopdetailhobbycategory {             /*「趣味」の店舗詳細画面の「郵便番号」～「店舗説明」の設定*/
+    line-height: 2.0;                     /*項目ごとの行幅*/
+    width: 90%;                        /*「郵便番号」～「定休日」横の広さ150%を設定*/
+    font-size: 2.0rem;                    /*「郵便番号」～「定休日」の文字20pxを設定*/
+    border-radius: 0 15px 15px 0;            /*右側の角だけ丸く*/
+    border-bottom: 1px solid crimson;   /*「郵便番号」～「定休日」のボーダ下線#FFCC00の色を設定*/
+    padding: 0.5em; 
+    
+    
+}
+
+.shopdetailhobbyshopexplain {
+    font-size: 2.0rem;             
+    line-height: 2.0;
+    width: 90%;
+    border-radius: 0 15px 15px 0;
+    padding: 0.5em;
+    margin-top: 10px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid crimson;                /*「郵便番号」～「定休日」のpadding0.5emを設定*/ 
+}
+
+.shopdetailhobby button{
+    color:white;                        /*色を白に設定*/
+    background-color: crimson;          /*背景色#FFCC00に設定*/
+    border-radius: 15px;                /*角を丸くする*/
+    border:3px solid crimson;            /*ボタンにマウスを合わせた際にボーダー#FFCC00を設定*/
+    padding:10px 10px;                   /*「食べる・飲む」ボタンのpadding10pxを設定*/
+    margin-top: 8px;        /*店舗詳細画面クラスshopdetailの「店舗説明」にmargintop8pxを設定*/
+    margin-bottom: 12px;        /*店舗詳細画面クラスshopdetailの「店舗説明」にmarginbottom12pxを設定*/
+    font-size: 2rem;            /*「食べる・飲む」の文字16pxを設定*/
+}
+
+.shopdetailhobbyback {
+    margin-top: 36px;        /*店舗詳細画面クラスshopdetailfoodbeveragebackの「一覧に戻る」にmargintop12pxを設定*/
+    margin-bottom: 24px;        /*店舗詳細画面クラスshopdetailの「店舗説明」にmarginbottom24pxを設定*/
+
+}
+
+
+.shopdetailhobbyback button{  /*店舗詳細画面クラスshopdetailfoodbeveragebackの「一覧に戻る」にマウスを合わせた際にボタン設定*/
+    color:white;                        /*色を白に設定*/
+    background-color: crimson;          /*背景色#FFCC00に設定*/
+    border-radius: 15px;                /*角を丸くする*/
+    border:3px solid crimson;            /*ボタンにマウスを合わせた際にボーダ#FFCC00を設定*/
+    padding:10px 10px;                    /*「食べる・飲む」ボタンのpadding10pxを設定*/
+    font-size: 2rem;                    /*「食べる・飲む」の文字16pxを設定*/
+    font-family: "ZenMaruGothic-Bold", sans-serif;        /*店舗詳細画面クラスshopdetailnameで「一覧に戻る」にZenMaruGothic-Boldに設定*/
+    width: 15%; 
+}
+
+.shopdetailhobbyback button:hover {
+ text-decoration: underline;        /*ボタンにマウスを合わせた際にボーダvioletを設定*/
+ color:crimson;                      /*色violetに設定*/
+ background-color: white;                /*背景色を白に設定*/
+ border:3px solid crimson;        /*ボタンにマウスを合わせた際にボーダvioletを設定*/
+}
+
+
+/*================================
+店舗詳細画面「医療・健康」の設定
+=================================*/
+.shopdetailmedicalcategory {             /*「暮らし」の店舗詳細画面の「郵便番号」～「店舗説明」の設定*/
+    line-height: 2.0;                     /*項目ごとの行幅*/
+    width: 90%;                        /*「郵便番号」～「定休日」横の広さ150%を設定*/
+    font-size: 2.0rem;                    /*「郵便番号」～「定休日」の文字20pxを設定*/
+    border-radius: 0 15px 15px 0;            /*右側の角だけ丸く*/
+    border-bottom: 1px solid burlywood;   /*「郵便番号」～「定休日」のボーダ下線#FFCC00の色を設定*/
+    padding: 0.5em; 
+}
+
+.shopdetailmedicalshopexplain {
+    font-size: 2.0rem;             
+    line-height: 2.0;
+    width: 90%;
+    border-radius: 0 15px 15px 0;
+    padding: 0.5em;
+    margin-top: 10px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid burlywood;                /*「郵便番号」～「定休日」のpadding0.5emを設定*/ 
+}
+
+.shopdetailmedical button{
+    color:white;                        /*色を白に設定*/
+    background-color: burlywood;          /*背景色#FFCC00に設定*/
+    border-radius: 15px;                /*角を丸くする*/
+    border:3px solid burlywood;            /*ボタンにマウスを合わせた際にボーダー#FFCC00を設定*/
+    padding:10px 10px;                   /*「食べる・飲む」ボタンのpadding10pxを設定*/
+    margin-top: 8px;        /*店舗詳細画面クラスshopdetailの「店舗説明」にmargintop8pxを設定*/
+    margin-bottom: 12px;        /*店舗詳細画面クラスshopdetailの「店舗説明」にmarginbottom12pxを設定*/
+    font-size: 2rem;            /*「食べる・飲む」の文字16pxを設定*/
+}
+
+
+.shopdetailmedicalback {
+    margin-top: 36px;        /*店舗詳細画面クラスshopdetailfoodbeveragebackの「一覧に戻る」にmargintop12pxを設定*/
+    margin-bottom: 24px;        /*店舗詳細画面クラスshopdetailの「店舗説明」にmarginbottom24pxを設定*/
+
+}
+
+.shopdetailmedicalback button{  /*店舗詳細画面クラスshopdetailfoodbeveragebackの「一覧に戻る」にマウスを合わせた際にボタン設定*/
+    color:white;                        /*色を白に設定*/
+    background-color: burlywood;          /*背景色#FFCC00に設定*/
+    border-radius: 15px;                /*角を丸くする*/
+    border:3px solid burlywood;            /*ボタンにマウスを合わせた際にボーダ#FFCC00を設定*/
+    padding:10px 10px;                    /*「食べる・飲む」ボタンのpadding10pxを設定*/
+    font-size: 2rem;                    /*「食べる・飲む」の文字16pxを設定*/
+    font-family: "ZenMaruGothic-Bold", sans-serif;        /*店舗詳細画面クラスshopdetailnameで「一覧に戻る」にZenMaruGothic-Boldに設定*/
+    width: 15%; 
+}
+
+.shopdetailmedicalback button:hover {
+ text-decoration: underline;        /*ボタンにマウスを合わせた際にボーダburlywoodを設定*/
+ color:burlywood;                      /*色burlywoodに設定*/
+ background-color: white;                /*背景色を白に設定*/
+ border:3px solid burlywood;        /*ボタンにマウスを合わせた際にボーダburlywoodを設定*/
+}
+
+
+
+
+
+/*================================
+店舗更新画面の設定
+=================================*/
+.NewUpdate {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: white;
+    
+}
+
+.NewUpdate h1{                    /*「食べる・飲む」,「食料品・飲料」,「おしゃれ」,「暮らし」,*「美容・理容」,*/
+    padding: 20px 12%
+}
+
+
+.item {
+    display:flex;                             /*店舗更新画面クラスitemの「店舗名」～「店舗説明」に表示フレックスボックスを設定*/
+    flex-direction: row;              /*店舗更新画面クラスitemの「店舗名」～「店舗説明」に向き左から右を設定*/
+    max-width :1280px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.iphoneitem {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    width:100%;
+}
+
+.shopupdateeatdrinkcategory {                    /*食べる・飲むの店舗更新画面の「店舗名」～「店舗画像」の設定*/
+    border-left: solid 8px #FFCC00;        /*左側の線と色#FFCC00を設定*/
+    background: whitesmoke;                /*背景色whitesmoke*/
+    margin-left: 20%;                    /*「店舗名」～「店舗画像」のmargin左20%を設定*/
+    line-height: 2.0;                     /*項目ごとの行幅を設定*/
+    width: 150%;                        /*「店舗名」～「店舗画像」横の広さ180%を設定*/
+    font-size: 20px;                    /*「店舗名」～「店舗画像」の文字30pxを設定*/
+    border-radius: 0 15px 15px 0;            /*右側の角だけ丸く*/
+    padding: 0.5em;                     /*「店舗名」～「店舗画像」のpadding0.5emを設定*/
+    margin-bottom: 20px;                /*「店舗名」～「店舗画像」のpadding0.5emを設定*/
+}
+
+.shopupdateeatdrink button {
+    color:white;                        /*色を白に設定*/
+    background-color: #FFCC00;          /*背景色#FFCC00に設定*/
+    border-radius: 15px;                /*角を丸くする*/
+    border:3px solid #FFCC00;            /*ボタンにマウスを合わせた際にボーダー#FFCC00を設定*/
+    padding:10px 10px;                   /*「食べる・飲む」ボタンのpadding10pxを設定*/
+    margin-bottom: 20px;        /*店舗詳細画面クラスshopdetailの「店舗説明」にmarginbottom15pxを設定*/
+    margin-left: 20%;            /*「食べる・飲む」のmargin左20%を設定*/            
+    font-size: 16px;            /*「食べる・飲む」の文字16pxを設定*/
+}
+
+.shopupdateeatdrink button:hover {    /*店舗詳細画面クラスshopdetaildrinkeatbackの「一覧に戻る」にマウスを合わせた際にボタン設定*/
+    text-decoration: underline;                /*ボタンにマウスを合わせた際にボーダ#FFCC00を設定*/
+    color:#FFCC00;                    /*色#FFCC00に設定*/
+    background-color: white;            /*拝啓色を白に設定*/            
+    border:3px solid #FFCC00;        /*ボタンにマウスを合わせた際にボーダ#FFCC00を設定*/
+}
+
+.shopupdateeatdrink a {
+    font-size: 16px;
+    
+}
+
+
+.shopupdatefoodbeveragecategory {                    /*食料品・飲料の店舗更新画面の「店舗名」～「店舗画像」の設定*/
+    border-left: solid 8px mediumturquoise;        /*左側の線と色mediumturquoiseを設定*/
+    background: whitesmoke;                /*背景色whitesmoke*/
+    margin-left: 20%;                    /*「店舗名」～「店舗画像」のmargin左20%を設定*/
+    line-height: 2.0;                     /*項目ごとの行幅を設定*/
+    width: 150%;                        /*「店舗名」～「店舗画像」横の広さ180%を設定*/
+    font-size: 20px;                    /*「店舗名」～「店舗画像」の文字30pxを設定*/
+    border-radius: 0 15px 15px 0;            /*右側の角だけ丸く*/
+    padding: 0.5em;                     /*「店舗名」～「店舗画像」のpadding0.5emを設定*/
+    margin-bottom: 20px;                /*「店舗名」～「店舗画像」のpadding0.5emを設定*/
+}
+
+.shopupdatefoodbeverage button {
+    color:white;                        /*色を白に設定*/
+    background-color: mediumturquoise;          /*背景色mediumturquoiseに設定*/
+    border-radius: 15px;                /*角を丸くする*/
+    border:3px solid mediumturquoise;            /*ボタンにマウスを合わせた際にボーダー#FFCC00を設定*/
+    padding:10px 10px;                   /*「食べる・飲む」ボタンのpadding10pxを設定*/
+    margin-bottom: 20px;        /*店舗詳細画面クラスshopdetailの「店舗説明」にmarginbottom15pxを設定*/
+    margin-left: 20%;            /*「食べる・飲む」のmargin左20%を設定*/            
+    font-size: 16px;            /*「食べる・飲む」の文字16pxを設定*/
+}
+
+.shopupdatefoodbeverage button:hover {    /*店舗詳細画面クラスshopdetaildrinkeatbackの「一覧に戻る」にマウスを合わせた際にボタン設定*/
+    text-decoration: underline;                /*ボタンにマウスを合わせた際にボーダmediumturquoiseを設定*/
+    color:mediumturquoise;                    /*色mediumturquoiseに設定*/
+    background-color: white;            /*拝啓色を白に設定*/            
+    border:3px solid mediumturquoise;        /*ボタンにマウスを合わせた際にボーダmediumturquoiseを設定*/
+}
+
+.shopupdatefoodbeverage a {
+    font-size: 16px;
+    
+}
+
+.shopupdatefashionablecategory {                    /*おしゃれの店舗更新画面の「店舗名」～「店舗画像」の設定*/
+    border-left: solid 8px lawngreen;        /*左側の線と色lawngreenを設定*/
+    background: whitesmoke;                /*背景色whitesmoke*/
+    margin-left: 20%;                    /*「店舗名」～「店舗画像」のmargin左20%を設定*/
+    line-height: 2.0;                     /*項目ごとの行幅を設定*/
+    width: 150%;                        /*「店舗名」～「店舗画像」横の広さ180%を設定*/
+    font-size: 20px;                    /*「店舗名」～「店舗画像」の文字30pxを設定*/
+    border-radius: 0 15px 15px 0;            /*右側の角だけ丸く*/
+    padding: 0.5em;                     /*「店舗名」～「店舗画像」のpadding0.5emを設定*/
+    margin-bottom: 20px;                /*「店舗名」～「店舗画像」のpadding0.5emを設定*/
+}
+
+.shopupdatefashionable button {
+    color:white;                        /*色を白に設定*/
+    background-color: lawngreen;          /*背景色lawngreenに設定*/
+    border-radius: 15px;                /*角を丸くする*/
+    border:3px solid lawngreen;            /*ボタンにマウスを合わせた際にボーダー#FFCC00を設定*/
+    padding:10px 10px;                   /*「食べる・飲む」ボタンのpadding10pxを設定*/
+    margin-bottom: 20px;        /*店舗詳細画面クラスshopdetailの「店舗説明」にmarginbottom15pxを設定*/
+    margin-left: 20%;            /*「おしゃれ」のmargin左20%を設定*/            
+    font-size: 16px;            /*「おしゃれ」の文字16pxを設定*/
+}
+
+.shopupdatefashionable button:hover {    /*店舗詳細画面クラスshopdetaildrinkeatbackの「一覧に戻る」にマウスを合わせた際にボタン設定*/
+    text-decoration: underline;                /*ボタンにマウスを合わせた際にボーダmediumturquoiseを設定*/
+    color:lawngreen;                    /*色lawngreenに設定*/
+    background-color: white;            /*拝啓色を白に設定*/            
+    border:3px solid lawngreen;        /*ボタンにマウスを合わせた際にボーダlawngreenを設定*/
+}
+
+.shopupdatefashionable a {
+    font-size: 16px;
+    
+}
+
+
+
+.shopupdatelifestylecategory {                    /*暮らしの店舗更新画面の「店舗名」～「店舗画像」の設定*/
+    border-left: solid 8px violet;        /*左側の線と色violetを設定*/
+    background: whitesmoke;                /*背景色whitesmoke*/
+    margin-left: 20%;                    /*「店舗名」～「店舗画像」のmargin左20%を設定*/
+    line-height: 2.0;                     /*項目ごとの行幅を設定*/
+    width: 150%;                        /*「店舗名」～「店舗画像」横の広さ180%を設定*/
+    font-size: 20px;                    /*「店舗名」～「店舗画像」の文字30pxを設定*/
+    border-radius: 0 15px 15px 0;            /*右側の角だけ丸く*/
+    padding: 0.5em;                     /*「店舗名」～「店舗画像」のpadding0.5emを設定*/
+    margin-bottom: 20px;                /*「店舗名」～「店舗画像」のpadding0.5emを設定*/
+}
+
+.shopupdatelifestyle button {
+    color:white;                        /*色を白に設定*/
+    background-color: violet;          /*背景色violetに設定*/
+    border-radius: 15px;                /*角を丸くする*/
+    border:3px solid violet;            /*ボタンにマウスを合わせた際にボーダー#FFCC00を設定*/
+    padding:10px 10px;                   /*「食べる・飲む」ボタンのpadding10pxを設定*/
+    margin-bottom: 20px;        /*店舗詳細画面クラスshopdetailの「店舗説明」にmarginbottom15pxを設定*/
+    margin-left: 20%;            /*「おしゃれ」のmargin左20%を設定*/            
+    font-size: 16px;            /*「おしゃれ」の文字16pxを設定*/
+}
+
+.shopupdatelifestyle button:hover {    /*店舗詳細画面クラスshopdetaildrinkeatbackの「一覧に戻る」にマウスを合わせた際にボタン設定*/
+    text-decoration: underline;                /*ボタンにマウスを合わせた際にボーダmediumturquoiseを設定*/
+    color:violet;                    /*色violetに設定*/
+    background-color: white;            /*拝啓色を白に設定*/            
+    border:3px solid violet;        /*ボタンにマウスを合わせた際にボーダvioletを設定*/
+}
+
+.shopupdatelifestyle a {
+    font-size: 16px;
+    
+}
+
+
+.shopupdatebeautycategory {                    /*美容・理容・エステの店舗更新画面の「店舗名」～「店舗画像」の設定*/
+    border-left: solid 8px dodgerblue;        /*左側の線と色dodgerblueを設定*/
+    background: whitesmoke;                /*背景色whitesmoke*/
+    margin-left: 20%;                    /*「店舗名」～「店舗画像」のmargin左20%を設定*/
+    line-height: 2.0;                     /*項目ごとの行幅を設定*/
+    width: 150%;                        /*「店舗名」～「店舗画像」横の広さ180%を設定*/
+    font-size: 20px;                    /*「店舗名」～「店舗画像」の文字30pxを設定*/
+    border-radius: 0 15px 15px 0;            /*右側の角だけ丸く*/
+    padding: 0.5em;                     /*「店舗名」～「店舗画像」のpadding0.5emを設定*/
+    margin-bottom: 20px;                /*「店舗名」～「店舗画像」のpadding0.5emを設定*/
+}
+
+.shopupdatebeauty button {
+    color:white;                        /*色を白に設定*/
+    background-color: dodgerblue;          /*背景色violetに設定*/
+    border-radius: 15px;                /*角を丸くする*/
+    border:3px solid dodgerblue;            /*ボタンにマウスを合わせた際にボーダーdodgerblueを設定*/
+    padding:10px 10px;                   /*「食べる・飲む」ボタンのpadding10pxを設定*/
+    margin-bottom: 20px;        /*店舗詳細画面クラスshopdetailの「店舗説明」にmarginbottom15pxを設定*/
+    margin-left: 20%;            /*「おしゃれ」のmargin左20%を設定*/            
+    font-size: 16px;            /*「おしゃれ」の文字16pxを設定*/
+}
+
+.shopupdatebeauty button:hover {    /*店舗詳細画面クラスshopdetaildrinkeatbackの「一覧に戻る」にマウスを合わせた際にボタン設定*/
+    text-decoration: underline;                /*ボタンにマウスを合わせた際にボーダdodgerblueを設定*/
+    color:dodgerblue;                    /*色dodgerblueに設定*/
+    background-color: white;            /*拝啓色を白に設定*/            
+    border:3px solid dodgerblue;        /*ボタンにマウスを合わせた際にボーダdodgerblueを設定*/
+}
+
+.shopupdatebeauty a {
+    font-size: 16px;
+    
+}
+
+
+.shopupdatehobbycategory {                    /*美容・理容・エステの店舗更新画面の「店舗名」～「店舗画像」の設定*/
+    border-left: solid 8px crimson;        /*左側の線と色dodgerblueを設定*/
+    background: whitesmoke;                /*背景色whitesmoke*/
+    margin-left: 20%;                    /*「店舗名」～「店舗画像」のmargin左20%を設定*/
+    line-height: 2.0;                     /*項目ごとの行幅を設定*/
+    width: 150%;                        /*「店舗名」～「店舗画像」横の広さ180%を設定*/
+    font-size: 20px;                    /*「店舗名」～「店舗画像」の文字30pxを設定*/
+    border-radius: 0 15px 15px 0;            /*右側の角だけ丸く*/
+    padding: 0.5em;                     /*「店舗名」～「店舗画像」のpadding0.5emを設定*/
+    margin-bottom: 20px;                /*「店舗名」～「店舗画像」のpadding0.5emを設定*/
+}
+
+.shopupdatehobby button {
+    color:white;                        /*色を白に設定*/
+    background-color: crimson;          /*背景色violetに設定*/
+    border-radius: 15px;                /*角を丸くする*/
+    border:3px solid crimson;            /*ボタンにマウスを合わせた際にボーダーdodgerblueを設定*/
+    padding:10px 10px;                   /*「食べる・飲む」ボタンのpadding10pxを設定*/
+    margin-bottom: 20px;        /*店舗詳細画面クラスshopdetailの「店舗説明」にmarginbottom15pxを設定*/
+    margin-left: 20%;            /*「おしゃれ」のmargin左20%を設定*/            
+    font-size: 16px;            /*「おしゃれ」の文字16pxを設定*/
+}
+
+.shopupdatehobby button:hover {    /*店舗詳細画面クラスshopdetaildrinkeatbackの「一覧に戻る」にマウスを合わせた際にボタン設定*/
+    text-decoration: underline;                /*ボタンにマウスを合わせた際にボーダdodgerblueを設定*/
+    color:crimson;                    /*色dodgerblueに設定*/
+    background-color: white;            /*拝啓色を白に設定*/            
+    border:3px solid crimson;        /*ボタンにマウスを合わせた際にボーダdodgerblueを設定*/
+}
+
+.shopupdatehobby a {
+    font-size: 16px;
+    
+}
+
+
+
+.shopupdatemedicalcategory {                    /*美容・理容・エステの店舗更新画面の「店舗名」～「店舗画像」の設定*/
+    border-left: solid 8px burlywood;        /*左側の線と色burlywoodを設定*/
+    background: whitesmoke;                /*背景色whitesmoke*/
+    margin-left: 20%;                    /*「店舗名」～「店舗画像」のmargin左20%を設定*/
+    line-height: 2.0;                     /*項目ごとの行幅を設定*/
+    width: 150%;                        /*「店舗名」～「店舗画像」横の広さ180%を設定*/
+    font-size: 20px;                    /*「店舗名」～「店舗画像」の文字30pxを設定*/
+    border-radius: 0 15px 15px 0;            /*右側の角だけ丸く*/
+    padding: 0.5em;                     /*「店舗名」～「店舗画像」のpadding0.5emを設定*/
+    margin-bottom: 20px;                /*「店舗名」～「店舗画像」のmargin-bottom20pxを設定*/
+}
+
+.shopupdatemedical button {
+    color:white;                        /*色を白に設定*/
+    background-color: burlywood;          /*背景色burlywoodに設定*/
+    border-radius: 15px;                /*角を丸くする*/
+    border:3px solid burlywood;            /*ボタンにマウスを合わせた際にボーダーburlywoodを設定*/
+    padding:10px 10px;                   /*「食べる・飲む」ボタンのpadding10pxを設定*/
+    margin-bottom: 20px;        /*店舗詳細画面クラスshopdetailの「店舗説明」にmarginbottom15pxを設定*/
+    margin-left: 20%;            /*「おしゃれ」のmargin左20%を設定*/            
+    font-size: 16px;            /*「おしゃれ」の文字16pxを設定*/
+}
+
+.shopupdatemedical button:hover {    /*店舗詳細画面クラスshopdetaildrinkeatbackの「一覧に戻る」にマウスを合わせた際にボタン設定*/
+    text-decoration: underline;                /*ボタンにマウスを合わせた際にボーダburlywoodを設定*/
+    color:burlywood;                    /*色burlywoodに設定*/
+    background-color: white;            /*拝啓色を白に設定*/            
+    border:3px solid burlywood;        /*ボタンにマウスを合わせた際にボーダburlywoodを設定*/
+}
+
+.shopupdatemedical a {
+    font-size: 16px;
+    
+}
+
+/*================================
+立花商店街ページの設定
+=================================*/
+
+
+.tachibanashopstreetcollegeexplain ul{
+    list-style: none;                /*立花商店街の説明欄のリストに黒点なしを設定*/
+}
+
+
+/*================================
+共通の設定
+=================================*/
+/*================================
+フッター(footer)の設定
+=================================*/
+footer {                    /*footerを最下部にするよう設定*/
+  margin-top: auto;
+}
+
+.PCfooterlogo {
+    background-image: url('../../images/home/header.jpg');
+    background-color:rgba(255,255,255,0.8);
+    background-blend-mode:lighten;
+    text-align: center;
+    padding: 20px;
+}
+
+.PCfooterlogo a {
+   text-decoration: none;
+   color:white;
+   background-color: skyblue;
+   border-radius: 15px;
+   padding: 10px;
+    
+}
+
+.PCfooterlogo a:hover {
+   text-decoration: underline;
+   color:skyblue;
+   background-color: white;
+   border:3px solid skyblue;
+}
+
+.footermenu {
+   margin: 0;
+   padding: 0;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   display:table;
+}
+
+.PCfooterlogo  li {
+   margin: 0;
+   padding: 0;
+   display:table-cell;
+   width:5%;
+   height:20px;
+}
+.PCfooterlogo .copyright {
+   margin: 0;
+   padding: 20px 0 0 0;
+ 
+}
+
+
+
+/*================================
+CSSにメディアクエリの設定
+=================================*/
+@media screen and (min-width: 641px) {                 /*画面サイズが641px以上で適用されるPC用のCSSの作成*/
+    
+    
+    .iphoneshoplisttopimage {                    /*641px以降は店舗トップページにて店舗分類iphoneshoplisttopimageのクラスを非表示に設定*/
+        display:none;
+    }
+    
+    .iphoneshoplisttoptitle {
+        display: none;                        /*641px以降は店舗トップページにて店舗分類iphoneshoplisttoptitleのクラスを非表示に設定*/
+    }
+    
+    .iphoneshoplisttopicon {                    /*641px以降は店舗トップページにて店舗分類iphoneshoplisttopticonのクラスを非表示に設定*/
+        display: none;
+    }
+    
+    .iphoneshoplisttopcoment {                /*641px以降は店舗トップページにて店舗分類iphoneshoplisttopcomentのクラスを非表示に設定*/
+        display: none;
+    }
+    
+    .iphoneshop_category {                /*641px以降は店舗一覧にて店舗分類ボタンshop_categoryのクラスを非表示に設定*/
+       display: none;
+   } 
+   
+   .iphoneitem-container {                /*641px以降は店舗一覧にて店舗一覧iphoneitem-containerのクラスを非表示に設定*/
+       display: none;
+   }
+   
+   .iphoneitem {                        /*641px以降は店舗詳細画面iphoneitemのクラスを非表示に設定*/
+        display: none;
+    }
+}
+
+@media screen and (max-width: 640px) {        /*画面サイズが640px以下で適用されるスマホ用のCSSの作成*/
+    header {
+        background-size: 70% auto;                /*640pxまではheaderの背景画像のサイズを70%に設定*/
+        
+    }
+    
+    .shoplisttopimage {
+        display:none;
+    }
+    
+    .shoplisttoptitle {
+        display: none;                        /*640pxまでは店舗一覧にて店舗分類shoplisttoptitleyのクラスを非表示に設定*/
+    }
+    
+    .shoplisttopicon {
+        display: none;
+    }
+    
+    .shoplisttopcoment {
+        display: none;
+    }
+    
+    
+    .shoplisttrasition button{
+        width:40%;
+        font-size: 2.0rem;
+        color:lightgrey;
+        background-color: white;
+        border-radius: 15px;
+        border:3px solid lightgrey;
+        padding:10px 10px;
+        margin-bottom: 24px;
+    }
+    
+    .shop_category {                            /*640pxまでは店舗一覧にて店舗分類shop_categoryのクラスを非表示に設定*/
+        display: none;
+    }
+    
+    .item-container {                            /*640px以降は店舗一覧にて店舗一覧item-containerのクラスを非表示に設定*/
+       display: none;
+   }
+   
+   .eatdrinkitem {                        /*640px以降は店舗一覧にてfurnituregooditemのクラス設定*/
+        width: 40%;
+        padding: 0px;
+        margin-right: 3%;
+        margin-left: 3%;
+        margin-bottom: 40px;
+        border:3px solid #FFCC00;
+        font-size: 1.0rem;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        transform: translateY(0);
+    
+    }
+    
+    
+   .foodbeverageitem {                        /*640px以降は店舗一覧にてfoodbeverageitemクラス設定*/
+        width: 40%;
+        padding: 0px;
+        margin-right: 3%;
+        margin-left: 3%;
+        margin-bottom: 40px;
+        border:3px solid mediumturquoise;
+        font-size: 1.0rem;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        transform: translateY(0);
+    }
+    
+    .fashionableitem {                    /*640px以降は店舗一覧にてfashionableitemクラス設定*/
+        width: 40%;
+        padding: 0px;
+        margin-right: 3%;
+        margin-left: 3%;
+        margin-bottom: 40px;
+        border:3px solid lawngreen;
+        font-size: 1.0rem;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        transform: translateY(0);
+    
+    }
+
+
+    .lifestyleitem {                    /*640px以降は店舗一覧にてlifestyleitemクラス設定*/
+        width: 40%;
+        padding: 0px;
+        margin-right: 3%;
+        margin-left: 3%;
+        margin-bottom: 40px;
+        border:3px solid violet;;
+        font-size: 1.0rem;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        transform: translateY(0);
+    }
+
+    .beautyitem {                        /*640px以降は店舗一覧にてbeautyitemクラス設定*/
+        width: 40%;
+        padding: 0px;
+        margin-right: 3%;
+        margin-left: 3%;
+        margin-bottom: 40px;
+        border:3px solid dodgerblue;
+        font-size: 1.0rem;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        transform: translateY(0);
+    }
+
+    .hobbyitem {                        /*640px以降は店舗一覧にてhobbyitemクラス設定*/
+        width: 40%;
+        padding: 0px;
+        margin-right: 3%;
+        margin-left: 3%;
+        margin-bottom: 40px;
+        border:3px solid crimson;
+        font-size: 1.0rem;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        transform: translateY(0);
+    }
+
+
+
+    .medicalitem {                        /*640px以降は店舗一覧にてmedicalitemクラス設定*/
+        width: 40%;
+        padding: 0px;
+        margin-right: 3%;
+        margin-left: 3%;
+        margin-bottom: 40px;
+        border:3px solid burlywood;
+        font-size: 1.0rem;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        transform: translateY(0);
+    }
+    
+    .item {                        /*641px以降は店舗詳細画面itemのクラスを非表示に設定*/
+        display: none;
+    }
+    
+    
+    
+    
+    .iphoneshopphoto {
+    
+        width:100%;                              /*店舗画像クラスshopphoto幅100%に設定*/
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .iphoneshopphoto img{
+        width: 100%;                /*店舗画像幅100%に設定*/
+        height: 340px;            /*店舗画像高さ320pxに設定*/
+    
+    }
+
+    .iphoneshopdetail {
+        font-family: "ZenMaruGothic-Bold", sans-serif;        /*店舗詳細画面クラスshopdetailnameで店名ZenMaruGothic-Boldに設定*/
+        padding-top: 10px;                                     /*店舗詳細画面クラスshopdetailの「郵便番号」～「店舗説明」に上余白60pxを設定*/
+        width:100%;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    
+    .shopdetaildrinkeat button {
+    
+        font-size: 1.0rem;
+    }
+    .shopdetaildrinkeatshopexplain {            /*店舗詳細画面クラスshopdetailの「店舗説明」の設定                            */
+        font-size: 1.2rem;                        /*店舗詳細画面クラスshopdetailの「店舗説明」にfontsize20pxを設定*/
+        line-height: 2.0;                        /*項目ごとの行幅*/
+        width: 100%;                              /*「郵便番号」～「店舗説明」横の広さ60%を設定*/
+        
+        padding: 0.5em;                        /*「郵便番号」～「定休日」のpadding0.5emを設定*/
+        margin-top: 10px;                       /*「食べる・飲む」と「店舗説明の間にpadding上60pxを設定*/
+        padding-bottom: 25px;                    /*「店舗説明」と「郵便番号」の間にpadding下65pxを設定*/
+        border-bottom: 1px solid #FFCC00;   /*「郵便番号」～「定休日」のボーダ下線#FFCC00の色を設定*/
+    
+    }
+    
+    .shopdetaileatdrinkcategory {
+        line-height: 2.0;
+        width: 100%;
+        font-size: 1.2rem;
+        border-bottom: 1px solid #FFCC00;
+        padding: 0.5em;
+    }
+    
+    .shopdetaildrinkeatback {
+        margin-top: 24px;
+        margin-bottom: 12px;
+    }
+    
+    .shopdetaildrinkeatback button {
+        width:24%;
+        font-size: 1.5rem;
+        
+    }
+    
+    .shopdetailfoodbeverage button {
+        font-size: 1.0rem;
+    }
+    .shopdetailfoodbeverageshopexplain {            /*店舗詳細画面クラスshopdetailの「店舗説明」の設定                            */
+        font-size: 1.2rem;                        /*店舗詳細画面クラスshopdetailの「店舗説明」にfontsize20pxを設定*/
+        line-height: 2.0;                        /*項目ごとの行幅*/
+        width: 100%;                              /*「郵便番号」～「店舗説明」横の広さ60%を設定*/
+        
+        padding: 0.5em;                        /*「郵便番号」～「定休日」のpadding0.5emを設定*/
+        margin-top: 10px;                       /*「食べる・飲む」と「店舗説明の間にpadding上60pxを設定*/
+        padding-bottom: 25px;                    /*「店舗説明」と「郵便番号」の間にpadding下65pxを設定*/
+    }
+    
+    .shopdetailfoodbeveragecategory {
+        line-height: 2.0;
+        width: 100%;
+        font-size: 1.2rem;
+        padding: 0.5em;
+    }
+    
+    .shopdetailfoodbeverageback {
+        margin-top: 24px;
+        margin-bottom: 12px;
+    }
+    
+    .shopdetailfoodbeverageback button {
+        width:24%;
+        font-size: 1.5rem;
+        
+    }
+    
+    
+    .shopdetailfashionable button {
+        font-size: 1.0rem;
+    }
+    
+    .shopdetailfashionableshopexplain {            /*店舗詳細画面クラスshopdetailの「店舗説明」の設定                            */
+        font-size: 1.2rem;                        /*店舗詳細画面クラスshopdetailの「店舗説明」にfontsize20pxを設定*/
+        line-height: 2.0;                        /*項目ごとの行幅*/
+        width: 100%;                              /*「郵便番号」～「店舗説明」横の広さ60%を設定*/
+        
+        padding: 0.5em;                        /*「郵便番号」～「定休日」のpadding0.5emを設定*/
+        margin-top: 10px;                       /*「食べる・飲む」と「店舗説明の間にpadding上60pxを設定*/
+        padding-bottom: 25px;                    /*「店舗説明」と「郵便番号」の間にpadding下65pxを設定*/
+    }
+    
+    .shopdetailfashionablecategory {
+        line-height: 2.0;
+        width: 100%;
+        font-size: 1.2rem;
+        padding: 0.5em;
+    }
+    
+    .shopdetailfashionableback {
+        margin-top: 24px;
+        margin-bottom: 12px;
+    }
+    
+    .shopdetailfashionableback button {
+        width:24%;
+        font-size: 1.5rem;
+        
+    }
+    
+    
+    .shopdetaillifestyle button {
+        font-size: 1.0rem;
+    }
+    
+    .shopdetaillifestyleshopexplain {            /*店舗詳細画面クラスshopdetailの「店舗説明」の設定                            */
+        font-size: 1.2rem;                        /*店舗詳細画面クラスshopdetailの「店舗説明」にfontsize20pxを設定*/
+        line-height: 2.0;                        /*項目ごとの行幅*/
+        width: 100%;                              /*「郵便番号」～「店舗説明」横の広さ60%を設定*/
+        
+        padding: 0.5em;                        /*「郵便番号」～「定休日」のpadding0.5emを設定*/
+        margin-top: 10px;                       /*「食べる・飲む」と「店舗説明の間にpadding上60pxを設定*/
+        padding-bottom: 25px;                    /*「店舗説明」と「郵便番号」の間にpadding下65pxを設定*/
+    }
+    
+    .shopdetaillifestylecategory {
+        line-height: 2.0;
+        width: 100%;
+        font-size: 1.2rem;
+        padding: 0.5em;
+    }
+    
+    .shopdetaillifestyleback {
+        margin-top: 24px;
+        margin-bottom: 12px;
+    }
+    
+    .shopdetaillifestyleback button {
+        width:24%;
+        font-size: 1.5rem;
+        
+    }
+    
+    
+    .shopdetailbeauty button {
+        font-size: 1.0rem;
+    }
+    
+    .shopdetailbeautyshopexplain {            /*店舗詳細画面クラスshopdetailの「店舗説明」の設定                            */
+        font-size: 1.2rem;                        /*店舗詳細画面クラスshopdetailの「店舗説明」にfontsize20pxを設定*/
+        line-height: 2.0;                        /*項目ごとの行幅*/
+        width: 100%;                              /*「郵便番号」～「店舗説明」横の広さ60%を設定*/
+        
+        padding: 0.5em;                        /*「郵便番号」～「定休日」のpadding0.5emを設定*/
+        margin-top: 10px;                       /*「食べる・飲む」と「店舗説明の間にpadding上60pxを設定*/
+        padding-bottom: 25px;                    /*「店舗説明」と「郵便番号」の間にpadding下65pxを設定*/
+    }
+    
+    .shopdetailbeautycategory {
+        line-height: 2.0;
+        width: 100%;
+        font-size: 1.2rem;
+        padding: 0.5em;
+    }
+    
+    .shopdetailbeautyback {
+        margin-top: 24px;
+        margin-bottom: 12px;
+    }
+    
+    .shopdetailbeautyback button {
+        width:24%;
+        font-size: 1.5rem;
+        
+    }
+    
+    
+    .shopdetailhobby button {
+        font-size: 1.0rem;
+    }
+    
+    .shopdetailhobbyshopexplain {            /*店舗詳細画面クラスshopdetailの「店舗説明」の設定                            */
+        font-size: 1.2rem;                        /*店舗詳細画面クラスshopdetailの「店舗説明」にfontsize20pxを設定*/
+        line-height: 2.0;                        /*項目ごとの行幅*/
+        width: 100%;                              /*「郵便番号」～「店舗説明」横の広さ60%を設定*/
+        
+        padding: 0.5em;                        /*「郵便番号」～「定休日」のpadding0.5emを設定*/
+        margin-top: 10px;                       /*「食べる・飲む」と「店舗説明の間にpadding上60pxを設定*/
+        padding-bottom: 25px;                    /*「店舗説明」と「郵便番号」の間にpadding下65pxを設定*/
+    }
+    
+    .shopdetailhobbycategory {
+        line-height: 2.0;
+        width: 100%;
+        font-size: 1.2rem;
+        padding: 0.5em;
+    }
+    
+    .shopdetailhobbyback {
+        margin-top: 24px;
+        margin-bottom: 12px;
+    }
+    
+    .shopdetailhobbyback button {
+        width:24%;
+        font-size: 1.5rem;
+        
+    }
+    
+    
+    .shopdetailmedical button {
+        font-size: 1.0rem;
+    }
+    
+    .shopdetailmedicalshopexplain {            /*店舗詳細画面クラスshopdetailの「店舗説明」の設定                            */
+        font-size: 1.2rem;                        /*店舗詳細画面クラスshopdetailの「店舗説明」にfontsize20pxを設定*/
+        line-height: 2.0;                        /*項目ごとの行幅*/
+        width: 100%;                              /*「郵便番号」～「店舗説明」横の広さ60%を設定*/
+        
+        padding: 0.5em;                        /*「郵便番号」～「定休日」のpadding0.5emを設定*/
+        margin-top: 10px;                       /*「食べる・飲む」と「店舗説明の間にpadding上60pxを設定*/
+        padding-bottom: 25px;                    /*「店舗説明」と「郵便番号」の間にpadding下65pxを設定*/
+    }
+    
+    .shopdetailmedicalcategory {
+        line-height: 2.0;
+        width: 100%;
+        font-size: 1.2rem;
+        padding: 0.5em;
+    }
+    
+    .shopdetailmedicalback {
+        margin-top: 24px;
+        margin-bottom: 12px;
+    }
+    
+    .shopdetailmedicalback button {
+        width:24%;
+        font-size: 1.5rem;
+        
+    }
+    
+    .NewUpdate h1 {
+        padding: 20px 8%;
+    }
+    
+    .shopupdateeatdrinkcategory {
+    
+        margin-left: 5%;
+        line-height: 2.0;
+        width: 80%;
+        font-size: 15px;
+        padding: 0.5em;
+        margin-bottom: 20px;
+    }
+    
+    .shopupdateeatdrink button {
+        padding: 10px 10px;
+        margin-bottom: 20px;
+        margin-left: 5%;
+        font-size: 16px;
+    }
+    
+    .shopupdateeatdrinkcategory {
+    
+        margin-left: 5%;
+        line-height: 2.0;
+        width: 80%;
+        font-size: 15px;
+        padding: 0.5em;
+        margin-bottom: 20px;
+    }
+    
+    .shopupdateeatdrink button {
+        padding: 10px 10px;
+        margin-bottom: 20px;
+        margin-left: 5%;
+        font-size: 16px;
+    }
+    
+    
+    .shopupdatefoodbeveragecategory {
+    
+        margin-left: 5%;
+        line-height: 2.0;
+        width: 80%;
+        font-size: 15px;
+        padding: 0.5em;
+        margin-bottom: 20px;
+    }
+    
+    .shopupdatefoodbeverage button {
+        padding: 10px 10px;
+        margin-bottom: 20px;
+        margin-left: 5%;
+        font-size: 16px;
+    }
+    
+    .shopupdatefoodbeveragecategory {
+    
+        margin-left: 5%;
+        line-height: 2.0;
+        width: 80%;
+        font-size: 15px;
+        padding: 0.5em;
+        margin-bottom: 20px;
+    }
+    
+    .shopupdatefoodbeverage button {
+        padding: 10px 10px;
+        margin-bottom: 20px;
+        margin-left: 5%;
+        font-size: 16px;
+    }
+    
+    
+    .shopupdatefashionablecategory {
+    
+        margin-left: 5%;
+        line-height: 2.0;
+        width: 80%;
+        font-size: 15px;
+        padding: 0.5em;
+        margin-bottom: 20px;
+    }
+    
+    .shopupdatefashionable button {
+        padding: 10px 10px;
+        margin-bottom: 20px;
+        margin-left: 5%;
+        font-size: 16px;
+    }
+    
+    .shopupdatefashionablecategory {
+    
+        margin-left: 5%;
+        line-height: 2.0;
+        width: 80%;
+        font-size: 15px;
+        padding: 0.5em;
+        margin-bottom: 20px;
+    }
+    
+    .shopupdatefashionable button {
+        padding: 10px 10px;
+        margin-bottom: 20px;
+        margin-left: 5%;
+        font-size: 16px;
+    }
+    
+    
+    .shopupdatelifestylecategory {
+    
+        margin-left: 5%;
+        line-height: 2.0;
+        width: 80%;
+        font-size: 15px;
+        padding: 0.5em;
+        margin-bottom: 20px;
+    }
+    
+    .shopupdatelifestyle button {
+        padding: 10px 10px;
+        margin-bottom: 20px;
+        margin-left: 5%;
+        font-size: 16px;
+    }
+    
+    .shopupdatelifestylecategory {
+    
+        margin-left: 5%;
+        line-height: 2.0;
+        width: 80%;
+        font-size: 15px;
+        padding: 0.5em;
+        margin-bottom: 20px;
+    }
+    
+    .shopupdatelifestyle button {
+        padding: 10px 10px;
+        margin-bottom: 20px;
+        margin-left: 5%;
+        font-size: 16px;
+    }
+    
+    
+    .shopupdatebeautycategory {
+    
+        margin-left: 5%;
+        line-height: 2.0;
+        width: 80%;
+        font-size: 15px;
+        padding: 0.5em;
+        margin-bottom: 20px;
+    }
+    
+    .shopupdatebeauty button {
+        padding: 10px 10px;
+        margin-bottom: 20px;
+        margin-left: 5%;
+        font-size: 16px;
+    }
+    
+    .shopupdatebeautycategory {
+    
+        margin-left: 5%;
+        line-height: 2.0;
+        width: 80%;
+        font-size: 15px;
+        padding: 0.5em;
+        margin-bottom: 20px;
+    }
+    
+    .shopupdatebeauty button {
+        padding: 10px 10px;
+        margin-bottom: 20px;
+        margin-left: 5%;
+        font-size: 16px;
+    }
+    
+    
+    .shopupdatehobbycategory {
+    
+        margin-left: 5%;
+        line-height: 2.0;
+        width: 80%;
+        font-size: 15px;
+        padding: 0.5em;
+        margin-bottom: 20px;
+    }
+    
+    .shopupdatehobby button {
+        padding: 10px 10px;
+        margin-bottom: 20px;
+        margin-left: 5%;
+        font-size: 16px;
+    }
+    
+    .shopupdatehobbycategory {
+    
+        margin-left: 5%;
+        line-height: 2.0;
+        width: 80%;
+        font-size: 15px;
+        padding: 0.5em;
+        margin-bottom: 20px;
+    }
+    
+    .shopupdatehobby button {
+        padding: 10px 10px;
+        margin-bottom: 20px;
+        margin-left: 5%;
+        font-size: 16px;
+    }
+    
+    
+    .shopupdatemedicalcategory {
+    
+        margin-left: 5%;
+        line-height: 2.0;
+        width: 80%;
+        font-size: 15px;
+        padding: 0.5em;
+        margin-bottom: 20px;
+    }
+    
+    .shopupdatemedical button {
+        padding: 10px 10px;
+        margin-bottom: 20px;
+        margin-left: 5%;
+        font-size: 16px;
+    }
+    
+    .shopupdatemedicalcategory {
+    
+        margin-left: 5%;
+        line-height: 2.0;
+        width: 80%;
+        font-size: 15px;
+        padding: 0.5em;
+        margin-bottom: 20px;
+    }
+    
+    .shopupdatemedical button {
+        padding: 10px 10px;
+        margin-bottom: 20px;
+        margin-left: 5%;
+        font-size: 16px;
+    }
+    
+    .shopdetailfooterlogo {                                   /*640pxまではshopdetailfooterの背景画像のサイズを70%に設定*/
+        background-image: url('../../images/home/shopdetailfooter.png');
+        background-size: 100% auto;
+        text-align: center;
+        padding: 20px;
+        height:140px;
+    }
+    
+    .shopdetailfooterlogo p {
+        padding-top: 95px;
+    }
+}
