@@ -4,5 +4,6 @@
 
 公開URL：https://kouta550615.shop/
 
+![shoppingstreettop](商店街サイトトップ.png)
 
 ## アプリ概要 💻
