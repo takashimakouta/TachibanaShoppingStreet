@@ -17,16 +17,31 @@
 ```bash
 # インストール済みパッケージをアップデートし、旧パッケージを自動削除する
 sudo dnf update -y
+
+# インストールする前に別バージョンのPHPがインストールされていたら削除
+sudo dnf remove -y php-common
+
+# PHPをインストールする
+sudo dnf install -y php
+
+# PHPのパッケージをインストールする
+sudo dnf install -y php-mbstring php-pdo php-gd php-mysqlnd php-xml
+
+# PHPのバージョンを確認する
+php -v
 ```
 
-プロジェクトへ移動
+②Composerのインストール
 
 ```bash
-# 必要に応じてプロジェクト名をリネーム
-mv flagship/ projectName
+# Composerのインストール
+curl -sS https://getcomposer.org/installer | php
 
-# プロジェクトへ移動
-cd projectName
+# composer.pharファイルを/usr/bin/composerへ移動する
+sudo mv composer.phar /usr/bin/composer
+
+# composerのアスキーアートが出ることを確認する
+composer
 ```
 
 ### Docker環境準備
