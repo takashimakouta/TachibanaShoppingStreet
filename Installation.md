@@ -1,57 +1,121 @@
-# Flagship 🚩
+# 環境構築
 
-商店街サイトにて商店街内の店舗一覧を表示する並びに店舗登録・更新・削除するためのECサイトとなります。
+開発環境(2024.07時点):
 
-公開URL：https://kouta550615.shop/
+- PHP: `8.2.15`
+- MySQL: `8.0.37`
+- Composer: `2.7.6`
+- Laravel: `10.48.10`
 
-![shoppingstreettop](商店街サイトトップ.png)
 
-## アプリ概要 💻
+## インストール手順
 
-### 特徴
+### Cloud9上でのLaravel開発環境構築
 
-受注と発注を一対一で紐づけることができ、案件ごとに粗利益を管理ができます。そのため、在庫を持たずに運営する商社やドロップシッピングを行う企業の業務フローにマッチしています。
-店舗の分類ごとで商店街にある店舗一覧を確認することができます。各店舗ごとでクリックすると電話番号や定休日等店舗の情報を閲覧できます。
+①PHPのインストール
 
-### 開発の背景
+```bash
+# インストール済みパッケージをアップデートし、旧パッケージを自動削除する
+sudo dnf update -y
+```
 
-私が住んでいる家の近くには幼少期から存在する商店街がございます。そちらの商店街のサイトを確認すると店舗一覧画面が少し見づらく、店舗の更新機能が無さそうに見受けられました。
+プロジェクトへ移動
 
-そこで、店舗一覧のレイアウトをもう少し見やすくしたい、店舗の管理を簡潔にできるようにしたいという想いからサイト開発しました。
+```bash
+# 必要に応じてプロジェクト名をリネーム
+mv flagship/ projectName
 
-### 主要機能概要
+# プロジェクトへ移動
+cd projectName
+```
 
-- 店舗新規登録: 店舗を新規で登録
-- 店舗更新: 店舗情報を変更があった場合に更新することが可能
-- 店舗削除: 店舗が閉店した際に店舗自体を一覧から削除することが可能
-- 店舗一覧表示：店舗の分類ごとで店舗一覧を表示可能
+### Docker環境準備
 
-## 技術・システム構成 ⚙️
+docker環境をスタート
 
-- PHP 8.2.15
-- Laravel 10.48.10
-- Composer 2.7.6
+```bash
+docker compose up -d
+```
 
-インフラ:
+`app`サービスのコンテナ内で bashシェルを起動する
 
-- AWS(Cloud9)
-- A5:SQL Mk-2 2.19.2.0
-- XREA free
+```bash
+docker compose exec app bash
+```
 
-システムのインストール手順の詳細は以下を参照ください。
+作業ディレクトリ`project`（=Laravelのインストール先）に入ったことを確認（ここではユーザー名=`docker`に設定している）
 
-- [環境構築]
+```bash
+<user_name>@<container_id>:/project$ 
+```
 
-### テーブル定義
+### Laravel準備
 
-以下を参照ください。
+必要なパッケージをインストール
 
-- [テーブル定義]
+```bash
+composer install 
+```
 
-### ER図
+`.env`ファイルを用意
 
-![ER図]
+```bash
+cp .env.example .env
+```
 
-### インフラ構成図
+viエディタで開いて（`vi .env`）、以下DB設定を記述
 
-今回のポートフォリオ公開環境では、コストの関係でRDSは使わずEC2内にDBを置いています。
+```bash
+DB_CONNECTION=mysql
+DB_HOST=db
+DB_PORT=3306
+DB_DATABASE=laraveldb
+DB_USERNAME=dbuser
+DB_PASSWORD=secret
+```
+
+DBに正しく接続できているか確認
+
+```bash
+$ php artisan tinker
+
+> DB::select('select 1');
+= [
+    {#6462
+      +"1": 1,
+    },
+  ]
+```
+
+テーブルとダミーデータを用意
+
+```bash
+php artisan migrate --seed
+```
+
+APP KEYを準備
+
+```bash
+php artisan key:generate
+```
+
+npmでパッケージをインストール
+
+```bash
+npm install
+```
+
+npmコマンドでViteを起動
+
+```bash
+npm run dev
+```
+
+ブラウザでアクセス、ログイン画面が表示されれば成功。
+
+[http://localhost:8000](http://localhost:8000)
+
+ログイン情報：
+
+- メールアドレス: `system-admin@example.com`
+- パスワード: `testpass`
