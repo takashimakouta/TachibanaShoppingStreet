@@ -220,6 +220,13 @@ $ php82cli -r "unlink('composer-setup.php');"
 
 #composerのインストール結果を確認する
 $ php82cli -d register_argc_argv=1 ~/composer.phar
+
+#「net2ftp ファイルマネージャ」にてbash_profileを開き、以下を追加する
+alias composer="php82cli -d register_argc_argv=1 ~/composer.phar"
+
+#bash_prolileの内容を反映する
+$	vi ~/.bash_profile
+
 ```
 
 
