@@ -202,6 +202,24 @@ $ echo $shell
 
 #コマンドプロンプトをログアウトする
 $ exit
+
+#「https://〇〇.shop」を開いたときに、もってきたLaravelのプロジェクトを参照する
+$ cd ~/public_html/
+$ rm -rf ドメイン名.shop/
+$ln -s /virtual/ドメイン名/public_html/cms/public /virtual/ドメイン名/public_html/ドメイン名.shop
+```
+
+④composerのセットアップ
+```bash
+$ php82cli -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+$ php82cli -r "if (hash_file('sha384', 'composer-setup.php') === 'dac665fdc30fdd8ec78b38b9800061b4150413ff2e3b6f88543c636f7cd84f6db9189d43a81e5503cda447da73c7e5b6') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+$ php82cli composer-setup.php
+$ php82cli -r "unlink('composer-setup.php');"
+
+
+
+#composerのインストール結果を確認する
+$ php82cli -d register_argc_argv=1 ~/composer.phar
 ```
 
 
