@@ -232,26 +232,26 @@ $	vi ~/.bash_profile
 ⑤node,npmのバージョンアップ
 ```bash
 #node・npmのバージョンを確認して、-bash: [npm/node]: command not foundと表示される場合は以降の手順でインストール作業を行う
-$	node -v
-$	npm -v
+$ node -v
+$ npm -v
 
 
 #curlで圧縮ファイルを取ってくる
-$	curl -sSL -O https://nodejs.org/dist/v22.11.0/node-v22.11.0-linux-x64.tar.xz
+$ curl -sSL -O https://nodejs.org/dist/v22.11.0/node-v22.11.0-linux-x64.tar.xz
 
 
 
 #圧縮ファイルを解凍する
-$	tar xvf ./node-v22.11.0-linux-x64.tar.xz	
+$ tar xvf ./node-v22.11.0-linux-x64.tar.xz	
 
 #ディレクトリを用意する
-$	mkdir -p ~/.local/lib
+$ mkdir -p ~/.local/lib
 
 # 作成したディレクトリへ移動する	
-$	mv ./node-v22.11.0-linux-x64 ~/.local/lib/
+$ mv ./node-v22.11.0-linux-x64 ~/.local/lib/
 	
 # 圧縮ファイルの削除	
-$	rm node-v22.11.0-linux-x64.tar.xz
+$ rm node-v22.11.0-linux-x64.tar.xz
 
 # 「net2ftp ファイルマネージャ」にてbash_profileを開き、以下を追加する
 $ export PATH="${HOME}/.local/lib/node-v22.11.0-linux-x64/bin:${PATH}"
@@ -262,11 +262,10 @@ $ vi ~/.bash_profile
 # インストール完了後に再度、nodeとnpmのバージョンを確認する	
 $ node -v
 $ npm -v
-
-
 ```
 
 ⑥.envの設定
+
 ```bash
 $ cp .env.example .env
 APP_NAME={appname} (自分で決めたappの名前)
@@ -284,20 +283,18 @@ DB_PORT=3306
 DB_DATABASE=hoge1234 (DBの作成 で決めたDB名、ユーザー名と同じ)
 DB_USERNAME=hoge1234 (ユーザー名)
 DB_PASSWORD={password} (DBの作成 で決めたパスワード)
-
-
+```
 
 
 
 ⑦ vendor、node_moduleをインストールする
+```bash
 # Cloud9からソースコードを落としてくるときに省いたvendorとnode_moduleフォルダの中身をインストールします。
 $ cd ~/public_html/cms/
 $ composer install
 	
 $ npm install
 $ npm run build
-
-
 
 ```
 
