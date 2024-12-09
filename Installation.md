@@ -298,12 +298,30 @@ $ npm run build
 
 ```
 
-### Laravel準備
-
-必要なパッケージをインストール
+### MariaDB設定変更
 
 ```bash
-composer install 
+# 下記URLから「XREA free」サービスへアクセスする。
+https://cp.xrea.com/site/
+
+# 「データベース」から「データベース詳細画面」へ遷移する
+
+# 「.env」ファイルを以下のように編集する
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE= {作成したDB名}
+DB_USERNAME= {作成したユーザ名}（DB名と一緒）
+DB_PASSWORD={作成したDBに対応するパスワード}
+
+#以下「マイグレーション」を実行する
+$ cd ~/public_html/cms/
+$ php82cli artisan key:generate
+$ php82cli artisan migrate
+$ php82cli artisan db:seed
+
+
+
 ```
 
 `.env`ファイルを用意
