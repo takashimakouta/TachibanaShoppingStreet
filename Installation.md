@@ -225,7 +225,7 @@ $ php82cli -d register_argc_argv=1 ~/composer.phar
 alias composer="php82cli -d register_argc_argv=1 ~/composer.phar"
 
 #bash_prolileの内容を反映する
-$	vi ~/.bash_profile
+$ vi ~/.bash_profile
 
 ```
 
@@ -320,69 +320,8 @@ $ php82cli artisan key:generate
 $ php82cli artisan migrate
 $ php82cli artisan db:seed
 
-
-
+#以下URLに接続する
+https://ドメイン名.shop/
 ```
 
-`.env`ファイルを用意
 
-```bash
-cp .env.example .env
-```
-
-viエディタで開いて（`vi .env`）、以下DB設定を記述
-
-```bash
-DB_CONNECTION=mysql
-DB_HOST=db
-DB_PORT=3306
-DB_DATABASE=laraveldb
-DB_USERNAME=dbuser
-DB_PASSWORD=secret
-```
-
-DBに正しく接続できているか確認
-
-```bash
-$ php artisan tinker
-
-> DB::select('select 1');
-= [
-    {#6462
-      +"1": 1,
-    },
-  ]
-```
-
-テーブルとダミーデータを用意
-
-```bash
-php artisan migrate --seed
-```
-
-APP KEYを準備
-
-```bash
-php artisan key:generate
-```
-
-npmでパッケージをインストール
-
-```bash
-npm install
-```
-
-npmコマンドでViteを起動
-
-```bash
-npm run dev
-```
-
-ブラウザでアクセス、ログイン画面が表示されれば成功。
-
-[http://localhost:8000](http://localhost:8000)
-
-ログイン情報：
-
-- メールアドレス: `system-admin@example.com`
-- パスワード: `testpass`
