@@ -33,3 +33,13 @@
 | shop_img         | 店舗画像      | string        |        |
 | created_at   | 作成日時     | timestamp     |        |
 | updated_at   | 更新日時     | timestamp     |        |
+
+## shopcategorys 店舗分類ID
+
+IDに紐づいた店舗分類情報を管理する。
+| カラム       | 名称         | 型            | 説明   |
+|---------------|--------------|---------------|--------|
+| id            | ID           | bigint_unsighed | PK     |
+| shop_category | 店舗分類      | string        |        |
+| created_at    | 作成日時       | timestamp     |        |
+| updated_at    | 更新日時       | timestamp     |        |
