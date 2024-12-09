@@ -229,6 +229,38 @@ $	vi ~/.bash_profile
 
 ```
 
+⑤node,npmのバージョンアップ
+```bash
+#node・npmのバージョンを確認して、-bash: [npm/node]: command not foundと表示される場合は以降の手順でインストール作業を行う
+$	node -v
+$	npm -v
+
+
+#curlで圧縮ファイルを取ってくる
+$	curl -sSL -O https://nodejs.org/dist/v22.11.0/node-v22.11.0-linux-x64.tar.xz
+
+
+
+#圧縮ファイルを解凍する
+$	tar xvf ./node-v22.11.0-linux-x64.tar.xz	
+
+#ディレクトリを用意する
+$	mkdir -p ~/.local/lib
+
+# 作成したディレクトリへ移動する	
+$	mv ./node-v22.11.0-linux-x64 ~/.local/lib/
+	
+# 圧縮ファイルの削除	
+$	rm node-v22.11.0-linux-x64.tar.xz
+
+# 「net2ftp ファイルマネージャ」にてbash_profileを開き、以下を追加する
+$ export PATH="${HOME}/.local/lib/node-v22.11.0-linux-x64/bin:${PATH}"
+
+#bash_prolileの内容を反映する
+$	vi ~/.bash_profile
+
+```
+
 
 
 ### Laravel準備
