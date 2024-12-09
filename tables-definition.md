@@ -1,6 +1,5 @@
 # テーブル定義
 
-- [テーブル定義](#テーブル定義)
  - [users ユーザー](#users-ユーザー)
  - [shopliststocks 店舗情報](#shopliststocks-店舗情報)
  - [shopcategorys 店舗分類ID](#shopcategorys-店舗分類ID)
