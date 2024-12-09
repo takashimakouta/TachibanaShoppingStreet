@@ -256,12 +256,50 @@ $	rm node-v22.11.0-linux-x64.tar.xz
 # 「net2ftp ファイルマネージャ」にてbash_profileを開き、以下を追加する
 $ export PATH="${HOME}/.local/lib/node-v22.11.0-linux-x64/bin:${PATH}"
 
-#bash_prolileの内容を反映する
-$	vi ~/.bash_profile
+# bash_prolileの内容を反映する
+$ vi ~/.bash_profile
+
+# インストール完了後に再度、nodeとnpmのバージョンを確認する	
+$ node -v
+$ npm -v
+
 
 ```
 
+⑥.envの設定
+```bash
+$ cp .env.example .env
+APP_NAME={appname} (自分で決めたappの名前)
+APP_ENV=production
+APP_KEY=
+APP_DEBUG=false
+APP_URL=https://{domain} (使うドメイン)
 
+LOG_CHANNEL=stack
+LOG_LEVEL=error
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=hoge1234 (DBの作成 で決めたDB名、ユーザー名と同じ)
+DB_USERNAME=hoge1234 (ユーザー名)
+DB_PASSWORD={password} (DBの作成 で決めたパスワード)
+
+
+
+
+
+⑦ vendor、node_moduleをインストールする
+# Cloud9からソースコードを落としてくるときに省いたvendorとnode_moduleフォルダの中身をインストールします。
+$ cd ~/public_html/cms/
+$ composer install
+	
+$ npm install
+$ npm run build
+
+
+
+```
 
 ### Laravel準備
 
