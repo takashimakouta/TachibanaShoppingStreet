@@ -30,7 +30,6 @@
 - PHP 8.2.15
 - MySQL 8.0.37
 - Laravel 10.48.10
-- Composer 2.7.6
 
 インフラ:
 
